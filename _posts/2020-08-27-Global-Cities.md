@@ -4,7 +4,6 @@ published: true
 * TOC
 {:toc}
 
-
 ## Introduction
 
 The global cities dataset lists cities accross the world and gives different types of information about them. This information includes things like continent, city population size, life expectancy, etc... Of this information, the seven most important variables in this dataset are the country, the city population size, the gross domestic product, life expectancy, the unemployment rate, the city area, and the annual population growth. 
@@ -26,6 +25,22 @@ library(stringr)
 library(DMwR)
 library(plotly)
 ```
+
+
+{% raw %}
+# Reading in global cities data
+globalCitiesData <- read.csv("GlobalCitiesPBI.csv")
+
+# Bringing in neccessary libraries
+library(knitr)
+library(ggplot2)
+library(stringr)
+library(DMwR)
+library(plotly)
+
+{% endraw %}
+
+
 
 
 

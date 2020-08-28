@@ -15,7 +15,6 @@ The global cities dataset lists cities accross the world and gives different typ
 
 The first step involves reading in the data, and bringing in the libraries which will be used as well.
 
-uper case R
 ```R
 # Reading in global cities data
 globalCitiesData <- read.csv("GlobalCitiesPBI.csv")
@@ -27,32 +26,8 @@ library(stringr)
 library(DMwR)
 library(plotly)
 ```
-Lowe case r
-```r
-# Reading in global cities data
-globalCitiesData <- read.csv("GlobalCitiesPBI.csv")
 
-# Bringing in neccessary libraries
-library(knitr)
-library(ggplot2)
-library(stringr)
-library(DMwR)
-library(plotly)
-```
 
-No R
-
-```
-# Reading in global cities data
-globalCitiesData <- read.csv("GlobalCitiesPBI.csv")
-
-# Bringing in neccessary libraries
-library(knitr)
-library(ggplot2)
-library(stringr)
-library(DMwR)
-library(plotly)
-```
 
 {% raw %}
 <iframe width="900" height="800" frameborder="0" scrolling="no" src="//plotly.com/~hananather/1.embed"></iframe>

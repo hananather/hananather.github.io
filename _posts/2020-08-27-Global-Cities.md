@@ -1,6 +1,7 @@
 ---
 published: true
 ---
+**Contents**
 * TOC
 {:toc}
 
@@ -30,6 +31,5 @@ library(plotly)
 
 
 {% raw %}
-<iframe width="900" height="800" frameborder="0" scrolling="no" src="//plotly.com/~hananather/1.embed"></iframe>
+<iframe width="450" height="400" frameborder="0" scrolling="no" src="//plotly.com/~hananather/1.embed"></iframe>
 {% endraw %}
-

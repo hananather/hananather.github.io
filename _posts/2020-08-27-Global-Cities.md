@@ -7,7 +7,7 @@ published: true
 
 ## Introduction
 
-The goal of this project is a better understanding of the various cities around the globe. Global cities dataset lists sixty-nine cities worldwide and list thirty-two features, including the continent, city population size, life expectancy, etc. 
+The goal of this project is to better understand the various cities around the globe. Global cities dataset contains sixty-nine cities worldwide and thirty-two feature.
 After playing around with the dataset, and critically thinking about the various features, the seven most compelling variables in this dataset seem to be the *country, the city population size, the gross domestic product, life expectancy, the unemployment rate, the city area, and the annual population growth.*
 In certain situations, it can be useful to compare countries rather than just individual cities when working with data on a global scale. 
 Furthermore, the city population size and area are essential because they give information on how large a city is, how much space there is, and how crowded it is. For example, if a particular city has a much higher population size than another, but the area is much smaller, it gives a good idea of how the city must be organized to support such numbers.
@@ -29,6 +29,11 @@ library(stringr)
 library(DMwR)
 library(plotly)
 ```
+The visualizations below show multivariate plots of the global cities dataset.
+Life expectancy versus GDP is shown using a scatterplot because both axes' data comes in a continuous form that is not connected by time. Furthermore, the values have been organized by color using the continent of origin of each city. This helps provide further context to the plot and elaborates on the the nature of the data and why some points may be higher or lower than others. It can also show potential connections of the relationship between life expectancy and GDP to their geographical region. Different locations have different socioeconomic factors, and these can help further explain the relationship between the two primary variables shown.
+
+
+
 
 
 

@@ -2,14 +2,15 @@
 layout: page
 title: About
 permalink: /about/
+published: true
 ---
 
-Some information about you!
+Graduating with an Honours BSc in Statistics this fall from uOttawa
 
 ### More Information
 
-A place to include any other types of information that you'd like to include about yourself.
+This site is a place for me to keep my projects.
 
 ### Contact me
 
-[email@domain.com](mailto:email@domain.com)
+[hathe098@uottawa.ca](mailto:hathe098@uottawa.ca)

@@ -14,7 +14,7 @@ The global cities dataset lists cities accross the world and gives different typ
 ## Basic Visualizations
 
 The first step involves reading in the data, and bringing in the libraries which will be used as well.
-```
+```{r}
 # Reading in global cities data
 globalCitiesData <- read.csv("GlobalCitiesPBI.csv")
 
@@ -25,22 +25,6 @@ library(stringr)
 library(DMwR)
 library(plotly)
 ```
-
-
-{% raw %}
-# Reading in global cities data
-globalCitiesData <- read.csv("GlobalCitiesPBI.csv")
-
-# Bringing in neccessary libraries
-library(knitr)
-library(ggplot2)
-library(stringr)
-library(DMwR)
-library(plotly)
-
-{% endraw %}
-
-
 
 
 

@@ -1,7 +1,8 @@
 ---
 published: true
 ---
-toc: true
+* TOC
+{:toc}
 
 
 ## Introduction

@@ -31,6 +31,7 @@ library(plotly)
 ```
 The visualizations below show multivariate plots of the global cities dataset.
 Life expectancy versus GDP is shown using a scatterplot because both axes' data comes in a continuous form that is not connected by time. Furthermore, the values have been organized by color using the continent of origin of each city. This helps provide further context to the plot and elaborates on the the nature of the data and why some points may be higher or lower than others. It can also show potential connections of the relationship between life expectancy and GDP to their geographical region. Different locations have different socioeconomic factors, and these can help further explain the relationship between the two primary variables shown.
+![plot-1.png]({{site.baseurl}}/_posts/plot-1.png)
 
 
 

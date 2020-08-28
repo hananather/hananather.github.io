@@ -34,7 +34,7 @@ Life expectancy versus GDP is shown using a scatterplot because both axes' data 
 
 ![plot-1.png]({{site.baseurl}}/_posts/plot-1.png)
 
-
+The plot of life expectancy versus the unemployment rate is built in the same way as the one above, which uses GDP. A scatter plot is optimal to display the potential relationship. Since the points can take on any value in a certain range, visualizations of the categorical kinds such as bar plots would not convey the information in the same effective manner.
 
 
 

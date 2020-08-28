@@ -36,7 +36,7 @@ Picture:
 
 <ul>
 <li  markdown="1">
-![plot-1]({{site.baseurl}}/_posts/plot-1.png)
+![plot-1]({{site.baseurl}}/images/Global_Cities/plot-1.png)
 </li>
 </ul>
  

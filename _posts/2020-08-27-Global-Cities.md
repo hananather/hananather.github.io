@@ -67,7 +67,7 @@ The following plot shows the air quality within a city versus the GDP per Capita
 The data for air quality was transformed in order to clarify the message of the graph further. The air quality index works by listing air quality on a scale of 0 to 500, with 0 being good and 500 being hazardous (US EPA, 2017). The problem with this is that using these values, one who is not familiar with the air quality index could believe that an extremely polluted city like Dehli for example, has good air quality since it is listed as 200 rather than understanding that this value is a bad sign. Therefore, a new column sorting the air quality is created to reduce confusion.
 
 The plot is interactable, hover over points for more information and double click on elements in the legend to isolate and examine them.
-```{r}
+```r
 # Plotting GDP and air quality with bubble size as city population and colour as continent
 p <- plot_ly(globalCitiesData, x = ~GDP.Per.Capita..thousands....PPP.rates..per.resident., y = ~Air.Quality., type = 'scatter', mode = 'markers',
         hoverinfo = 'text',
@@ -86,10 +86,10 @@ p <- plot_ly(globalCitiesData, x = ~GDP.Per.Capita..thousands....PPP.rates..per.
 p
 ```
 {% raw %}
-<iframe width="800" height="700" frameborder="0" scrolling="no" src="//plotly.com/~hananather/5.embed"></iframe>
+<iframe width="800" height="500" frameborder="0" scrolling="no" src="//plotly.com/~hananather/5.embed"></iframe>
 {% endraw %}
 
 
 {% raw %}
-<iframe width="450" height="400" frameborder="0" scrolling="no" src="//plotly.com/~hananather/1.embed"></iframe>
+<iframe width="800" height="500" frameborder="0" scrolling="no" src="//plotly.com/~hananather/1.embed"></iframe>
 {% endraw %}

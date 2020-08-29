@@ -117,7 +117,31 @@ p
 <iframe width="800" height="500" frameborder="0" scrolling="no" src="//plotly.com/~hananather/5.embed"></iframe>
 {% endraw %}
 
+The below plot shows the infant mortality rate in each city versus life expectancy. For similar reasons as the above plot, the following plot uses a bubble plot form to show the relationship between two variables which are not categorical. This allows for the relationship between each axis to naturally be revealed by the position of the points. Furthermore, the size of the points now corresponds to the GDP of each city displayed while the colours still display the continent. This allows for further information to be communicated through the plot without adding another axis or more points. 
+The plot is again interactive. Hover over points for further information. Additionally, if you wish to isolate certain elements in the legend, simply double click on them.
 
+{% raw %}
+<iframe width="900" height="800" frameborder="0" scrolling="no" src="//plotly.com/~hananather/7.embed"></iframe>
+{% endraw %}
+
+
+The below plot shows a way to combine scatter and line plots to easily convey more information. The plot gives the life expectancies for males and females for each city in the form of points and then also shows the average life expectancy per city as well. This average is graphed in the form of a line. This allows one to see whether points fall above or below the average with ease and therefore exemplifies the relationship found between life expectancy and gender.
+```r
+# Plotting life expectancy of males versus females as well as the average per city 
+p<-ggplot(globalCitiesData) + 
+  geom_line(aes(x=Life.Expectancy,y=Life.Expectancy))+ 
+  geom_point(aes(x=Life.Expectancy,y = Life.Expectancy.in.Years..Male.,colour="Male"))+
+  geom_point(aes(x=Life.Expectancy,y = Life.Expectancy.in.Years..Female.,colour="Female")) + 
+  theme(axis.text.y  = element_text(size=6.8)) + 
+  xlab("Life Expectancy of Males in Years") + 
+  ylab("Life Expectancy of Females in Years")+ 
+  ggtitle("Life Expectancy of Females versus Males") + 
+  theme_bw()+scale_colour_manual("", 
+                      breaks = c("Male", "Female"),
+                      values = c("darkorchid1", "cornflowerblue")) # (Chang, 2009), (Diggs, 2012)
+p<-ggplotly(p)
+p
+```
 {% raw %}
 <iframe width="800" height="500" frameborder="0" scrolling="no" src="//plotly.com/~hananather/1.embed"></iframe>
 {% endraw %}

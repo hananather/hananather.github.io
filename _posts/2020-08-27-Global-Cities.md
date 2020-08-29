@@ -48,9 +48,46 @@ ggplot(globalCitiesData, mapping = aes(x = Life.Expectancy)) + geom_point(aes(y=
 
 
 When visualizing a categorical and a continuous variable, bar plots can reveal a lot of information. The below plot gives the city population sizes for all the cities and has ordered them from largest to smallest. Finally, the legend also displays the Continent of each city once again. This visualization allows one to see which regions have the most populous cities and the sizes of each city exactly. A scatter plot in this scenario would show very similar data, but would not as effectively communicate the size differences in population per city due to the fact that this would be showed simply with the height of the point rather than with the dimensions of a bar of data as shown below.
-
+```r
+# Plotting city population size and continent
+ggplot(globalCitiesData, aes(x=reorder(Geography,-City.Population..millions.),y=City.Population..millions.)) + geom_bar(stat="identity", aes(fill=Continent),colour="black", width=0.9)+theme(axis.text.x  = element_text(size=6.9)) + xlab("City Population Size") + ylab("City Population Size")+ ggtitle("City Population Sizes in Each Country")+theme(axis.text.x = element_text(angle = 90, hjust = 1)) + theme_bw() # (Chang, 2009), (zero323, 2015)
+```
 ![plot-1]({{site.baseurl}}/images/Global_Cities/plot-3.png)
+This next plot shows the city areas and population sizes per continent. This information is useful to split up because different regions tend to have distinct architectures and styles of living and differing amounts of physical space to expand in. This means that splitting the data per continent can help show the information in a context where it is easier to compare each city to those in geographically similar situations.
+```r
+# Plotting city areas and city population sizes split by continent
+ggplot(globalCitiesData, aes(x = City.Area..km2., y =City.Population..millions., group=Continent)) + geom_point(aes(colour = Continent)) + xlab("City Area in Kilometers Squared") + ylab("City Population in Millions")+ ggtitle("City Areas versus City Population Sizes Accross Continents") + theme_bw()+facet_grid(~Continent)+theme(axis.text.x = element_text(angle = 90, hjust = 1)) # (Chang,2009)
+```
+![plot-1]({{site.baseurl}}/images/Global_Cities/plot-4.png)
 
+## Interactive Visualizations
+
+
+The following plot shows the air quality within a city versus the GDP per Capita per person. This data was displayed in the form of a bubble plot since each city has values for air quality and gdp which both can take on any variable rather than being of a categorical nature. Furthermore, the size of each point changes based on the size of the population in each city. This helps provide further information and context to each value. 
+The data for air quality was transformed in order to clarify the message of the graph further. The air quality index works by listing air quality on a scale of 0 to 500, with 0 being good and 500 being hazardous (US EPA, 2017). The problem with this is that using these values, one who is not familiar with the air quality index could believe that an extremely polluted city like Dehli for example, has good air quality since it is listed as 200 rather than understanding that this value is a bad sign. Therefore, a new column sorting the air quality is created to reduce confusion.
+
+The plot is interactable, hover over points for more information and double click on elements in the legend to isolate and examine them.
+```{r}
+# Plotting GDP and air quality with bubble size as city population and colour as continent
+p <- plot_ly(globalCitiesData, x = ~GDP.Per.Capita..thousands....PPP.rates..per.resident., y = ~Air.Quality., type = 'scatter', mode = 'markers',
+        hoverinfo = 'text',
+        color = ~Continent,
+        marker = list(size = ~City.Population..millions., sizeref = 0.6, showlegend=F),
+        text = ~paste('</br> City: ', Geography,
+                      '</br> Country: ', Country,
+                      '</br> Average Life Expectancy in Years: ',  Life.Expectancy))%>%
+        layout(title = "Air Quality versus GDP per Capita in Global Cities",
+           xaxis = list(title = 'GDP per Capita'),
+           yaxis = list(title = 'Air Quality Index')) %>%
+      layout(yaxis = list(
+      ticktext = list("Good", "Moderate", "Potentially Unhealthy", "Unhealthy", "Very Unhealthy"), 
+      tickvals = list(50, 100, 150, 200, 300),
+      tickmode = "array"))  # (Plotly, 2019)
+p
+```
+{% raw %}
+<iframe width="800" height="700" frameborder="0" scrolling="no" src="//plotly.com/~hananather/5.embed"></iframe>
+{% endraw %}
 
 
 {% raw %}

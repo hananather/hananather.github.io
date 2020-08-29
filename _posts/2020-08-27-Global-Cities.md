@@ -56,7 +56,10 @@ ggplot(globalCitiesData, aes(x=reorder(Geography,-City.Population..millions.),y=
 This next plot shows the city areas and population sizes per continent. This information is useful to split up because different regions tend to have distinct architectures and styles of living and differing amounts of physical space to expand in. This means that splitting the data per continent can help show the information in a context where it is easier to compare each city to those in geographically similar situations.
 ```r
 # Plotting city areas and city population sizes split by continent
-ggplot(globalCitiesData, aes(x = City.Area..km2., y =City.Population..millions., group=Continent)) + geom_point(aes(colour = Continent)) + xlab("City Area in Kilometers Squared") + ylab("City Population in Millions")+ ggtitle("City Areas versus City Population Sizes Accross Continents") + theme_bw()+facet_grid(~Continent)+theme(axis.text.x = element_text(angle = 90, hjust = 1)) # (Chang,2009)
+
+ggplot(globalCitiesData, aes(x = City.Area..km2., y =City.Population..millions., group=Continent)) +
+
+geom_point(aes(colour = Continent)) + xlab("City Area in Kilometers Squared") + ylab("City Population in Millions")+ ggtitle("City Areas versus City Population Sizes Accross Continents") + theme_bw()+facet_grid(~Continent)+theme(axis.text.x = element_text(angle = 90, hjust = 1)) # (Chang,2009)
 ```
 ![plot-1]({{site.baseurl}}/images/Global_Cities/plot-4.png)
 

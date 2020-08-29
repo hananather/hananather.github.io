@@ -56,9 +56,16 @@ ggplot(globalCitiesData, mapping = aes(x = Life.Expectancy)) + geom_point(aes(y=
 
 When visualizing a categorical and a continuous variable, bar plots can reveal a lot of information. The below plot gives the city population sizes for all the cities and has ordered them from largest to smallest. Finally, the legend also displays the Continent of each city once again. This visualization allows one to see which regions have the most populous cities and the sizes of each city exactly. A scatter plot in this scenario would show very similar data, but would not as effectively communicate the size differences in population per city due to the fact that this would be showed simply with the height of the point rather than with the dimensions of a bar of data as shown below.
 ```r
-# Plotting city population size and continent
-
-ggplot(globalCitiesData, aes(x=reorder(Geography,-City.Population..millions.),y=City.Population..millions.)) + geom_bar(stat="identity", aes(fill=Continent),colour="black", width=0.9)+theme(axis.text.x  = element_text(size=6.9)) + xlab("City Population Size") + ylab("City Population Size")+ ggtitle("City Population Sizes in Each Country")+theme(axis.text.x = element_text(angle = 90, hjust = 1)) + theme_bw() 
+ggplot(globalCitiesData, 
+      aes(x=reorder(Geography,-City.Population..millions.),
+          y=City.Population..millions.)) + 
+  geom_bar(stat="identity", aes(fill=Continent),
+           colour="black", width=0.9)+
+  theme(axis.text.x  = element_text(size=6.9)) + 
+  xlab("City Population Size") +
+  ylab("City Population Size")+ 
+  ggtitle("City Population Sizes in Each Country")+
+  theme(axis.text.x = element_text(angle = 90, hjust = 1)) + theme_bw() 
 
 # (Chang, 2009), (zero323, 2015)
 ```

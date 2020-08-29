@@ -32,13 +32,24 @@ library(plotly)
 The visualizations below show multivariate plots of the global cities dataset.
 Life expectancy versus GDP is shown using a scatterplot because both axes' data comes in a continuous form that is not connected by time. Furthermore, the values have been organized by color using the continent of origin of each city. This helps provide further context to the plot and elaborates on the the nature of the data and why some points may be higher or lower than others. It can also show potential connections of the relationship between life expectancy and GDP to their geographical region. Different locations have different socioeconomic factors, and these can help further explain the relationship between the two primary variables shown.
 
-
+```r
+# Plotting GDP and life expectancy using ggplot2
+ggplot(data = globalCitiesData, mapping = aes(x = GDP.Per.Capita..thousands....PPP.rates..per.resident., y =Life.Expectancy)) + geom_point(aes(colour = Continent)) + xlab("GDP per Capita in Thousands") + ylab("Life Expectancy")+ ggtitle("Life Expectancy versus GDP") + theme_bw()
+```
 ![plot-1]({{site.baseurl}}/images/Global_Cities/plot-1.png)
 
 
 The plot of life expectancy versus the unemployment rate is built in the same way as the one above, which uses GDP. A scatter plot is optimal to display the potential relationship. Since the points can take on any value in a certain range, visualizations of the categorical kinds such as bar plots would not convey the information in the same effective manner.
+```r
+# Plotting unemployment rate and life expectancy
+ggplot(globalCitiesData, mapping = aes(x = Life.Expectancy)) + geom_point(aes(y=Unemployment.Rate,colour=Continent))+ xlab("Life Expectancy") + ylab("Unemployment Rate")+ ggtitle("Life Expectancy versus Unemployment Rate") + theme_bw()
+```
+![plot-1]({{site.baseurl}}/images/Global_Cities/plot-2.png)
 
 
+When visualizing a categorical and a continuous variable, bar plots can reveal a lot of information. The below plot gives the city population sizes for all the cities and has ordered them from largest to smallest. Finally, the legend also displays the Continent of each city once again. This visualization allows one to see which regions have the most populous cities and the sizes of each city exactly. A scatter plot in this scenario would show very similar data, but would not as effectively communicate the size differences in population per city due to the fact that this would be showed simply with the height of the point rather than with the dimensions of a bar of data as shown below.
+
+![plot-1]({{site.baseurl}}/images/Global_Cities/plot-3.png)
 
 
 

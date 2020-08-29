@@ -35,7 +35,7 @@ Life expectancy versus GDP is shown using a scatterplot because both axes' data 
 ```r
 # Plotting GDP and life expectancy using ggplot2
 ggplot(data = globalCitiesData, 
-       mapping = aes(x = GDP.Per.Capita..thousands....PPP.rates..per.resident., y =Life.Expectancy)) + 
+       mapping = aes(x = GDP.Per.Capita..thousands....PPP.rates..per.resident., y =Life.Expectancy))+ 
   geom_point(aes(colour = Continent)) + 
   xlab("GDP per Capita in Thousands") + 
   ylab("Life Expectancy")+ 

@@ -96,21 +96,21 @@ The data for air quality was transformed in order to clarify the message of the 
 
 The plot is interactable, hover over points for more information and double click on elements in the legend to isolate and examine them.
 ```r
-# Plotting GDP and air quality with bubble size as city population and colour as continent
-p <- plot_ly(globalCitiesData, x = ~GDP.Per.Capita..thousands....PPP.rates..per.resident., y = ~Air.Quality., type = 'scatter', mode = 'markers',
-        hoverinfo = 'text',
-        color = ~Continent,
-        marker = list(size = ~City.Population..millions., sizeref = 0.6, showlegend=F),
-        text = ~paste('</br> City: ', Geography,
+p <- plot_ly(globalCitiesData, x = ~GDP.Per.Capita..thousands....PPP.rates..per.resident., y = ~Air.Quality., 
+             type = 'scatter', mode = 'markers',
+             hoverinfo = 'text',
+             color = ~Continent,
+             marker = list(size = ~City.Population..millions., sizeref = 0.6, showlegend=F),
+             text = ~paste('</br> City: ', Geography,
                       '</br> Country: ', Country,
-                      '</br> Average Life Expectancy in Years: ',  Life.Expectancy))%>%
-        layout(title = "Air Quality versus GDP per Capita in Global Cities",
-           xaxis = list(title = 'GDP per Capita'),
-           yaxis = list(title = 'Air Quality Index')) %>%
-      layout(yaxis = list(
-      ticktext = list("Good", "Moderate", "Potentially Unhealthy", "Unhealthy", "Very Unhealthy"), 
-      tickvals = list(50, 100, 150, 200, 300),
-      tickmode = "array"))  # (Plotly, 2019)
+                      '</br> Average Life Expectancy in Years: ',  Life.Expectancy)) %>% 
+  layout(title = "Air Quality versus GDP per Capita in Global Cities",
+         xaxis = list(title = 'GDP per Capita'),
+         yaxis = list(title = 'Air Quality Index')) %>%
+  layout(yaxis = list(
+    ticktext = list("Good", "Moderate", "Potentially Unhealthy", "Unhealthy", "Very Unhealthy"), 
+    tickvals = list(50, 100, 150, 200, 300),
+    tickmode = "array"))  
 p
 ```
 {% raw %}
@@ -119,7 +119,25 @@ p
 
 The below plot shows the infant mortality rate in each city versus life expectancy. For similar reasons as the above plot, the following plot uses a bubble plot form to show the relationship between two variables which are not categorical. This allows for the relationship between each axis to naturally be revealed by the position of the points. Furthermore, the size of the points now corresponds to the GDP of each city displayed while the colours still display the continent. This allows for further information to be communicated through the plot without adding another axis or more points. 
 The plot is again interactive. Hover over points for further information. Additionally, if you wish to isolate certain elements in the legend, simply double click on them.
-
+```r
+# Plotting life expectancy and infant mortality rate with bubble size as gdp and colour as #continent
+p <- plot_ly(globalCitiesData, x = ~ Life.Expectancy, 
+             y = ~Infant.Mortality..Deaths.per.1.000.Births., type = 'scatter', mode = 'markers',
+             hoverinfo = 'text',
+             marker = list(size = ~GDP.Per.Capita..thousands....PPP.rates..per.resident., 
+                           sizeref = 3, showlegend = T),
+             color = ~Continent,
+             text = ~paste('</br> City: ', Geography,
+                      '</br> Gross Domestic Product in Thousands: ',
+                      GDP.Per.Capita..thousands....PPP.rates..per.resident.,
+                      '</br> Life Expectancy in Years: ',  Life.Expectancy,
+                      '</br> Infant Mortality per 1000 Births: ', 
+                      Infant.Mortality..Deaths.per.1.000.Births.)) %>%
+  layout(title = "Infant Mortality versus Life Expectency in Global Cities",
+         xaxis = list(title = 'Average Life Expectancy in Years'),
+         yaxis = list(title = 'Infant Mortality per 1000 Births'))
+p
+```
 {% raw %}
 <iframe width="900" height="800" frameborder="0" scrolling="no" src="//plotly.com/~hananather/7.embed"></iframe>
 {% endraw %}

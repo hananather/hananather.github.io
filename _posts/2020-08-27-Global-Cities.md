@@ -48,8 +48,11 @@ ggplot(data = globalCitiesData, mapping = aes(x =
 The plot of life expectancy versus the unemployment rate is built in the same way as the one above, which uses GDP. A scatter plot is optimal to display the potential relationship. Since the points can take on any value in a certain range, visualizations of the categorical kinds such as bar plots would not convey the information in the same effective manner.
 ```r
 # Plotting unemployment rate and life expectancy
-
-ggplot(globalCitiesData, mapping = aes(x = Life.Expectancy)) + geom_point(aes(y=Unemployment.Rate,colour=Continent))+ xlab("Life Expectancy") + ylab("Unemployment Rate")+ ggtitle("Life Expectancy versus Unemployment Rate") + theme_bw()
+ggplot(globalCitiesData, mapping = aes(x = Life.Expectancy)) + 
+  geom_point(aes(y=Unemployment.Rate,colour=Continent))+ 
+  xlab("Life Expectancy") + ylab("Unemployment Rate")+ 
+  ggtitle("Life Expectancy versus Unemployment Rate") + 
+  theme_bw()
 ```
 ![plot-1]({{site.baseurl}}/images/Global_Cities/plot-2.png)
 

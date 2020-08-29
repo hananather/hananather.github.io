@@ -34,6 +34,7 @@ Life expectancy versus GDP is shown using a scatterplot because both axes' data 
 
 ```r
 # Plotting GDP and life expectancy using ggplot2
+
 ggplot(data = globalCitiesData, mapping = aes(x = GDP.Per.Capita..thousands....PPP.rates..per.resident., y =Life.Expectancy)) + geom_point(aes(colour = Continent)) + xlab("GDP per Capita in Thousands") + ylab("Life Expectancy")+ ggtitle("Life Expectancy versus GDP") + theme_bw()
 ```
 ![plot-1]({{site.baseurl}}/images/Global_Cities/plot-1.png)
@@ -42,6 +43,7 @@ ggplot(data = globalCitiesData, mapping = aes(x = GDP.Per.Capita..thousands....P
 The plot of life expectancy versus the unemployment rate is built in the same way as the one above, which uses GDP. A scatter plot is optimal to display the potential relationship. Since the points can take on any value in a certain range, visualizations of the categorical kinds such as bar plots would not convey the information in the same effective manner.
 ```r
 # Plotting unemployment rate and life expectancy
+
 ggplot(globalCitiesData, mapping = aes(x = Life.Expectancy)) + geom_point(aes(y=Unemployment.Rate,colour=Continent))+ xlab("Life Expectancy") + ylab("Unemployment Rate")+ ggtitle("Life Expectancy versus Unemployment Rate") + theme_bw()
 ```
 ![plot-1]({{site.baseurl}}/images/Global_Cities/plot-2.png)
@@ -50,7 +52,10 @@ ggplot(globalCitiesData, mapping = aes(x = Life.Expectancy)) + geom_point(aes(y=
 When visualizing a categorical and a continuous variable, bar plots can reveal a lot of information. The below plot gives the city population sizes for all the cities and has ordered them from largest to smallest. Finally, the legend also displays the Continent of each city once again. This visualization allows one to see which regions have the most populous cities and the sizes of each city exactly. A scatter plot in this scenario would show very similar data, but would not as effectively communicate the size differences in population per city due to the fact that this would be showed simply with the height of the point rather than with the dimensions of a bar of data as shown below.
 ```r
 # Plotting city population size and continent
-ggplot(globalCitiesData, aes(x=reorder(Geography,-City.Population..millions.),y=City.Population..millions.)) + geom_bar(stat="identity", aes(fill=Continent),colour="black", width=0.9)+theme(axis.text.x  = element_text(size=6.9)) + xlab("City Population Size") + ylab("City Population Size")+ ggtitle("City Population Sizes in Each Country")+theme(axis.text.x = element_text(angle = 90, hjust = 1)) + theme_bw() # (Chang, 2009), (zero323, 2015)
+
+ggplot(globalCitiesData, aes(x=reorder(Geography,-City.Population..millions.),y=City.Population..millions.)) + geom_bar(stat="identity", aes(fill=Continent),colour="black", width=0.9)+theme(axis.text.x  = element_text(size=6.9)) + xlab("City Population Size") + ylab("City Population Size")+ ggtitle("City Population Sizes in Each Country")+theme(axis.text.x = element_text(angle = 90, hjust = 1)) + theme_bw() 
+
+# (Chang, 2009), (zero323, 2015)
 ```
 ![plot-1]({{site.baseurl}}/images/Global_Cities/plot-3.png)
 This next plot shows the city areas and population sizes per continent. This information is useful to split up because different regions tend to have distinct architectures and styles of living and differing amounts of physical space to expand in. This means that splitting the data per continent can help show the information in a context where it is easier to compare each city to those in geographically similar situations.
@@ -58,8 +63,9 @@ This next plot shows the city areas and population sizes per continent. This inf
 # Plotting city areas and city population sizes split by continent
 
 ggplot(globalCitiesData, aes(x = City.Area..km2., y =City.Population..millions., group=Continent)) +
+geom_point(aes(colour = Continent)) + xlab("City Area in Kilometers Squared") + ylab("City Population in Millions")+ ggtitle("City Areas versus City Population Sizes Accross Continents") + theme_bw()+facet_grid(~Continent)+theme(axis.text.x = element_text(angle = 90, hjust = 1)) 
 
-geom_point(aes(colour = Continent)) + xlab("City Area in Kilometers Squared") + ylab("City Population in Millions")+ ggtitle("City Areas versus City Population Sizes Accross Continents") + theme_bw()+facet_grid(~Continent)+theme(axis.text.x = element_text(angle = 90, hjust = 1)) # (Chang,2009)
+#(Chang,2009)
 ```
 ![plot-1]({{site.baseurl}}/images/Global_Cities/plot-4.png)
 

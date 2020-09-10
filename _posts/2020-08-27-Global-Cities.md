@@ -5,7 +5,13 @@ published: true
 * TOC
 {:toc}
 
-## Introduction
+# Introduction
+
+This data comes from the Globalization and World Cities Research Network which is an organization which studies globalization and the relationship it has with cities accross the world (GaWC, 2019).
+
+## Questions about the data
+
+There are some immediate questions to be asked about this dataset. It can be seen with preliminary visual inspection that the data describes several cities and their population size, region, wealth, life expectancy, etc… The first question is to check the general statistics of the data and what they can reveal. For example, are the maximum and minimum life expectancies reasonable? A maximum life expectancy of 1000 for example would be quite surprising and reveal issues with the data and vice versa. This would suggest that the data contains errors which would need to be examined. This means that it is important to check if any of the data has outliers or information which does not make sense. Questions pertaining to the data itself includes investigating relationships within the data. For example, do certain cities within the same continents have vastly different life expectancies? What are the population differences between cities? What are the differences in poverty or unemployment rates? Do these have a relationship with the country or continent at all? The only way to obtain these answers is to first organize and clean the data, then analyze and visualize it.
 
 The goal of this project is to better understand the various cities around the globe. Global cities dataset contains sixty-nine cities worldwide and thirty-two feature.
 After playing around with the dataset, and critically thinking about the various features, the seven most compelling variables in this dataset seem to be the *country, the city population size, the gross domestic product, life expectancy, the unemployment rate, the city area, and the annual population growth.*
@@ -13,6 +19,30 @@ In certain situations, it can be useful to compare countries rather than just in
 Furthermore, the city population size and area are essential because they give information on how large a city is, how much space there is, and how crowded it is. For example, if a particular city has a much higher population size than another, but the area is much smaller, it gives a good idea of how the city must be organized to support such numbers.
 The life expectancy and infant mortality also both can say a lot about a city. For example, life expectancy can be loosely tied with quality of life. This is because a poor and unhealthy life will lead to a shorter life expectancy. Infant mortality will also say a lot on this subject. Furthermore, high infant mortality rates are often associated with poor and unhealthy regions. Even if a city has a high GDP, a low life expectancy and/or infant mortality rate can say a lot about how most of the population is living. 
 The unemployment rate is also an excellent indicator to learn more about an area, much like life expectancy. Unemployment rates can say a lot about the quality of life in the city and how it may be for the people who live there. Finally, a city's gross domestic product is a commonly used indicator of how the city is doing economically. It can be used to measure a city's success in terms different from the quality of life.
+
+# Outlier Detection and Missing Data
+
+```R
+# Summarizing major ports data
+summarize(globalCitiesData, mean_port = mean(globalCitiesData$Major.Ports), st_dev_port = sd(globalCitiesData$Major.Ports), max_port=max(globalCitiesData$Major.Ports), min_port=min(globalCitiesData$Major.Ports))
+```
+```
+##   mean_port st_dev_port max_port min_port
+## 1      1.25    2.083159       17        0
+```
+
+
+```R
+# Summarizing major ports data
+summarize(globalCitiesData, mean_port = mean(globalCitiesData$Major.Ports), st_dev_port = sd(globalCitiesData$Major.Ports), max_port=max(globalCitiesData$Major.Ports), min_port=min(globalCitiesData$Major.Ports))
+```
+```
+##   mean_hied st_dev_hied max_hied min_hied
+## 1  42.23529    47.58625      264        2
+```
+
+
+
 
 ## Basic Visualizations
 

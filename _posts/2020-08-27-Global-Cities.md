@@ -111,7 +111,7 @@ ggplot(data = globalCitiesData[-which(globalCitiesData$Major.Ports>2.5),],
 ```
 
 ![plot-1]({{site.baseurl}}/images/Global_Cities/Part_1/Plot_3_a.png)
-```{r}
+```r
 # New outlier plot
 ggplot(globalCitiesData[-which(globalCitiesData$Major.Ports>2.5),],aes(x=Continent,y=Major.Ports, group = Continent, fill=Continent)) +
      geom_boxplot() +
@@ -127,7 +127,7 @@ The above boxplot looks incredibly strange; however, visual analysis of the tabl
 ### Higher Education Institutions
 
 Below, tables for the higher education institutions per continent are created to determine the existence of possible outliers.
-```{r}
+```r
 # PLotting higher education institutions
 ggplot(data = globalCitiesData, 
        mapping = aes(x = Continent, y = Higher.Education.Institutions)) + 
@@ -143,7 +143,7 @@ ggplot(data = globalCitiesData,
 ![plot-1]({{site.baseurl}}/images/Global_Cities/Part_1/Plot_4_a.png)
 
 To further check for outliers, a boxplot can be made.
-```{r}
+```r
 # Plotting outliers for higher education institutions
 ggplot(globalCitiesData, aes(x=Continent, y=Higher.Education.Institutions, group = Continent, fill=Continent)) +
      geom_boxplot(colour="black") +
@@ -155,7 +155,7 @@ ggplot(globalCitiesData, aes(x=Continent, y=Higher.Education.Institutions, group
 ![plot-1]({{site.baseurl}}/images/Global_Cities/Part_1/Plot_4_b.png)
 
 Again, there appear to be large values skewing the distribution; removing them following the standard deviation line may lead to better plots.
-```{r}
+```r
 # Box plot for higher education institutions without the large outliers
 ggplot(globalCitiesData[-which(globalCitiesData$Higher.Education.Institutions>90),],aes(x=Continent,y=Higher.Education.Institutions, group = Continent, fill=Continent)) +
      geom_boxplot() +
@@ -177,7 +177,7 @@ Next, the data will be further inspected.
 ### Life Expectancy and Infant Mortality
 
 The below data analyzes the relationship between general life expectancy and infant mortality.
-```{r}
+```r
 # Plotting infant mortality rate versus life expectancy
 ggplot(data = globalCitiesData, mapping = aes(x = Life.Expectancy, 
                                               y = Infant.Mortality..Deaths.per.1.000.Births.)) +
@@ -190,7 +190,7 @@ ggplot(data = globalCitiesData, mapping = aes(x = Life.Expectancy,
 ![plot-1]({{site.baseurl}}/images/Global_Cities/Part_1/Plot_5_a.png)
 
 It can be seen above that as life expectancy for a city increases, the infant mortality decreases. Additionally, the continents that a city is located in seem to be correlated with this. This makes sense because richer continents such as Europe, North America, and some countries within Asia would have a population with better access to better healthcare. To check this, another plot must be made.
-```{r}
+```r
 # Plotting outliers for life expectancy and infant mortality
 ggplot(globalCitiesData, aes(x=Life.Expectancy,
                              y=Infant.Mortality..Deaths.per.1.000.Births., 
@@ -205,7 +205,7 @@ ggplot(globalCitiesData, aes(x=Life.Expectancy,
 ![plot-1]({{site.baseurl}}/images/Global_Cities/Part_1/Plot_5_b.png)
 
 While the plots are mostly good, it can be seen that the data for Europe has many values that skew the plot. This can be further examined, as seen below.
-```{r}
+```r
 # Plotting only data from Europe
 ggplot(globalCitiesData[-which(globalCitiesData$Continent!="Europe"),], aes(x=Life.Expectancy, y=Infant.Mortality..Deaths.per.1.000.Births.)) +
      geom_boxplot(colour="black",fill="cornflowerblue") +
@@ -221,7 +221,7 @@ Isolating the data to Europe, which had the most outliers, it can be seen that t
 ### GDP and Life expectancy
 
 The following data checks for a relationship between the GDP per capita in a city versus the Life Expectancy within the city.
-```{r}
+```r
 ggplot(data = globalCitiesData, mapping = aes(x = GDP.Per.Capita..thousands....PPP.rates..per.resident., 
                                               y =Life.Expectancy)) + 
   geom_point(aes(colour = Continent)) +
@@ -231,7 +231,7 @@ ggplot(data = globalCitiesData, mapping = aes(x = GDP.Per.Capita..thousands....P
   theme_bw()
 ```
 ![plot-1]({{site.baseurl}}/images/Global_Cities/Part_1/Plot_6_a.png)
-```{r}
+```r
 ggplot(globalCitiesData, aes(x=Life.Expectancy, y=GDP.Per.Capita..thousands....PPP.rates..per.resident., group = Continent,  fill=Continent)) +
      geom_boxplot() +
     labs(title = "Life Expectancy versus GDP of cities in each continent",
@@ -246,7 +246,7 @@ It can be seen that small outliers do exist in Europe. From visual inspection of
 ### Unemployment Rate and Poverty Rate
 
 The next relationship to be analyzed is between unemployment and poverty. Below a plot can be seen displaying this relationship (if it exists).
-```{r}
+```r
 # Plotting Poverty Rate versus Unemployment Rate
 ggplot(data = globalCitiesData, mapping = aes(x = Unemployment.Rate, y = Poverty.Rate)) + 
   geom_point(aes(colour = Continent)) + 
@@ -258,7 +258,7 @@ ggplot(data = globalCitiesData, mapping = aes(x = Unemployment.Rate, y = Poverty
 ![plot-1]({{site.baseurl}}/images/Global_Cities/Part_1/Plot_7_a.png)
 
 The resulting plot is unclear and appears to have large values skewing the distribution. Therefore univariate analysis of the individual variables may provide further information.
-```{r}
+```r
 # Plotting only poverty rate against the row number
 ggplot(globalCitiesData, aes(x = as.numeric(row.names(globalCitiesData)),
                              y=Poverty.Rate)) + 
@@ -268,7 +268,7 @@ ggplot(globalCitiesData, aes(x = as.numeric(row.names(globalCitiesData)),
   theme_bw()
 ```
 ![plot-1]({{site.baseurl}}/images/Global_Cities/Part_1/Plot_7_b.png)
-```{r}
+```r
 # Plotting unemployment rate exclusively against row number
 ggplot(globalCitiesData, aes(x = as.numeric(row.names(globalCitiesData)), 
                              y=Unemployment.Rate)) +
@@ -278,7 +278,7 @@ ggplot(globalCitiesData, aes(x = as.numeric(row.names(globalCitiesData)),
   theme_bw()
 ```
 The results are strange, and so boxplots are made for each variable to check for outliers.
-```{r}
+```r
 # Plotting unemployment rate per continent
 ggplot(globalCitiesData, aes(x = Continent, y=Unemployment.Rate, group = Continent,  fill=Continent)) +
      geom_boxplot() +
@@ -291,7 +291,7 @@ ggplot(globalCitiesData, aes(x = Continent, y=Unemployment.Rate, group = Contine
 
 
 The unemployment rate has some issues; one entry even has 0 as a value. This must be an error considering all areas have an unemployment rate greater than 0 (Zagorsky, 2018). Now to check the poverty rate per continent.
-```{r}
+```r
 # Plotting poverty rate per continent
 ggplot(globalCitiesData, aes(x=Continent, y=Poverty.Rate, group = Continent,
                              fill=Continent)) +
@@ -308,7 +308,7 @@ It is obvious that the issues that came with finding the distributions between t
 ## What should we do about the Outliers
 
 As previously stated, there are issues with the dataset. Below, outliers and missing values are dealt with to ensure optimal data for analysis.
-```{r}
+```r
 # Summarizing all data which has a poverty rate of 0
 # This is too long to print
 summary(filter(globalCitiesData, globalCitiesData$Poverty.Rate!='0')) 
@@ -330,14 +330,14 @@ The first step to dealing with this is to examine the issue further.
 
 Since each row contains unique data on unique cities, it is not optimal to remove rows with missing values. Additionally, the data does not appear to be linearly correlated with other data points. Therefore, the KNN nearest neighbor method will be used.
 
-```{r}
+```r
 # Performing a knn Imputation on the poverty rate data
 globalCitiesData$Poverty.Rate[globalCitiesData$Poverty.Rate=="0"] <- NA # (mbq, 2011)
 globalCitiesData <- knnImputation(globalCitiesData,k=10)
 ```
 
 To double check:
-```{r}
+```r
 # Checking results through the summary statistics
 summarize(globalCitiesData, 
           max_PR=max(globalCitiesData$Poverty.Rate),
@@ -351,7 +351,7 @@ summarize(globalCitiesData,
 It can be seen that the minimum value is now 0.01, the missing values have been fixed
 
 Similar to the poverty rate, the unemployment rate has a single missing value. This can be resolved in the same way.
-```{r}
+```r
 # Checking the summary statistics for unemployment rate
 summarize(globalCitiesData, max_PR=max(globalCitiesData$Unemployment.Rate), min_hied=min(globalCitiesData$Unemployment.Rate)) #(mbq, 2011)
 ```

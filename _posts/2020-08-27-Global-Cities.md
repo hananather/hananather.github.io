@@ -331,3 +331,31 @@ p
 {% raw %}
 <iframe width="800" height="500" frameborder="0" scrolling="no" src="//plotly.com/~hananather/1.embed"></iframe>
 {% endraw %}
+
+
+
+# References:
+
+Rodriguez, Dania M. "dataMeta: Making and Appending a Data Dictionary to an R Dataset". [cran.r.project.org](http://cran.r.project.org/), 11th August, 2017, [https://cran.r-project.org/web/packages/dataMeta/vignettes/dataMeta_Vignette.html](https://cran.r-project.org/web/packages/dataMeta/vignettes/dataMeta_Vignette.html). Accessed October 15th, 2019.
+
+Kabacoff, Robert I. "Descriptive Statistics". Datacamp, 2017. [https://www.statmethods.net/stats/descriptives.html](https://www.statmethods.net/stats/descriptives.html). Accessed October 15th, 2019.
+
+Chase. "R ggplot2: Labelling a horizontal line on the y axis with a numeric value" StackExchange, October 13th, 2012. [https://stackoverflow.com/questions/12876501/r-ggplot2-labelling-a-horizontal-line-on-the-y-axis-with-a-numeric-value](https://stackoverflow.com/questions/12876501/r-ggplot2-labelling-a-horizontal-line-on-the-y-axis-with-a-numeric-value). Accessed October 16th, 2019.
+
+Mbq. "Conditionally Remove Data Frame Rows with R". StackExchange, November 4th, 2011. [https://stackoverflow.com/questions/8005154/conditionally-remove-dataframe-rows-with-r](https://stackoverflow.com/questions/8005154/conditionally-remove-dataframe-rows-with-r). Accessed October 18th, 2019.
+
+Zagorsky, Jay L. "Why the Unemployment Rate will Never get to 0 Percent- but It Still Could Go a Lot Lower". TheConversation, September 21st, 201. [https://theconversation.com/why-the-unemployment-rate-will-never-get-to-zero-percent-but-it-could-still-go-a-lot-lower-103665](https://theconversation.com/why-the-unemployment-rate-will-never-get-to-zero-percent-but-it-could-still-go-a-lot-lower-103665). Accessed October 18th, 2019.
+
+Ha, Amanda. "Total employment decreased over the month, but increased by 37,600 over the year". Employment Developement Department, October 18th, 2019. [https://www.labormarketinfo.edd.ca.gov/file/lfmonth/sanf$pds.pdf](https://www.labormarketinfo.edd.ca.gov/file/lfmonth/sanf$pds.pdf). Accessed October 18th, 2019.
+
+Globalization and World Cities Research Network (GaWC). Loughborough University, 2019. [https://www.lboro.ac.uk/gawc/group.html](https://www.lboro.ac.uk/gawc/group.html). Accessed October 15, 2019.
+
+"R Figure Reference" Plotly, 2019. [https://plot.ly/r/reference/](https://plot.ly/r/reference/). Accessed October 25th, 2019.
+
+Chang, Jonathon. "Rotating and Spacing Axis Labels in ggplot2". Stackexchange, August 25th, 2009. [https://stackoverflow.com/questions/1330989/rotating-and-spacing-axis-labels-in-ggplot2](https://stackoverflow.com/questions/1330989/rotating-and-spacing-axis-labels-in-ggplot2). Accessed October 24th, 2019.
+
+Diggs, Brian. "Add Legend to ggplot2 Line Plot". Stackexchange, April 27th, 2012. [https://stackoverflow.com/questions/10349206/add-legend-to-ggplot2-line-plot](https://stackoverflow.com/questions/10349206/add-legend-to-ggplot2-line-plot). Accessed October 24th, 2019.
+
+United States Environmental Protection Agency. "Air Quality Index". [airnow.gov](http://airnow.gov/), July 27th, 2017. [https://airnow.gov/index.cfm?action=aqi_brochure.index](https://airnow.gov/index.cfm?action=aqi_brochure.index). Accessed October 24th, 2019.
+
+zero323. "geom_bar Define Border Color with Different Fill Colors". Stackexchange, June 8th, 2015. [https://stackoverflow.com/questions/30709972/geom-bar-define-border-color-with-different-fill-colors](https://stackoverflow.com/questions/30709972/geom-bar-define-border-color-with-different-fill-colors). Accessed October 24th, 2019.

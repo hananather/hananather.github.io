@@ -85,7 +85,7 @@ The above boxplot looks incredibly strange; however, visual analysis of the tabl
 
 Below, tables for the higher education institutions per continent are created to determine the existence of possible outliers.
 
-![plot-1]({{site.baseurl}}/images/Global_Cities/Part_1/PLot_4_a.png)
+![plot-1]({{site.baseurl}}/images/Global_Cities/Part_1/Plot_4_a.png)
 
 To further check for outliers, a boxplot can be made.
 

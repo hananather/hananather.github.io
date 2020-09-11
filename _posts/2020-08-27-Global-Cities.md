@@ -37,7 +37,8 @@ The results above appear to be reasonable for the most part, however, a few vari
 
 ```R
 # Summarizing major ports data
-summarize(globalCitiesData, mean_port = mean(globalCitiesData$Major.Ports),
+summarize(globalCitiesData,
+          mean_port = mean(globalCitiesData$Major.Ports),
           st_dev_port = sd(globalCitiesData$Major.Ports),
           max_port=max(globalCitiesData$Major.Ports),
           min_port=min(globalCitiesData$Major.Ports))
@@ -50,9 +51,9 @@ summarize(globalCitiesData, mean_port = mean(globalCitiesData$Major.Ports),
 
 ```R
 # Summarizing higher education institutions data
-summarize(globalCitiesData, mean_hied =
-            mean(globalCitiesData$Higher.Education.Institutions), st_dev_hied =
-            sd(globalCitiesData$Higher.Education.Institutions),
+summarize(globalCitiesData, 
+          mean_hied = mean(globalCitiesData$Higher.Education.Institutions),
+          st_dev_hied =sd(globalCitiesData$Higher.Education.Institutions),
           max_hied=max(globalCitiesData$Higher.Education.Institutions),
           min_hied=min(globalCitiesData$Higher.Education.Institutions))
 ```

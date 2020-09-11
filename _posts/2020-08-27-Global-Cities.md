@@ -522,7 +522,7 @@ p
 
 
 
-# References:
+# References
 
 Rodriguez, Dania M. "dataMeta: Making and Appending a Data Dictionary to an R Dataset". [cran.r.project.org](http://cran.r.project.org/), 11th August, 2017, [https://cran.r-project.org/web/packages/dataMeta/vignettes/dataMeta_Vignette.html](https://cran.r-project.org/web/packages/dataMeta/vignettes/dataMeta_Vignette.html). Accessed October 15th, 2019.
 

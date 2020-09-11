@@ -145,17 +145,17 @@ As previously stated, there are issues with the dataset. Below, outliers and mis
 
 ### Outliers
 
-****However, since our knowledge of the number of ports and higher education institutions per city is extremely limited, this data will be left in because it cannot be said for sure if they are errors.****
+**However, since our knowledge of the number of ports and higher education institutions per city is extremely limited, this data will be left in because it cannot be said for sure if they are errors.**
 
 ### Missing Values
 
 We are interested in understanding the relationship between poverty and unemployment rates and how this relationship may change based on the country or continent. To answer these questions, it is important to have the best possible cleaned data so the missing data must be dealt with.
 
-****The largest issue with this dataset comes in the form of missing values. This can mean several things. Most likely, the number 0 was used to represent no data. It is also possible that this was due to input error. Either way, the 0 values skew the results.****
+**The largest issue with this dataset comes in the form of missing values. This can mean several things. Most likely, the number 0 was used to represent no data. It is also possible that this was due to input error. Either way, the 0 values skew the results.**
 
 The first step to dealing with this is to examine the issue further.
 
-We can see above that the 0 values do not appear to have any sort of pattern. Before continuing,** **it is important to note that these 0 values are only being treated as missing since it is known that poverty rates of 0 do not exist. If this were not the case, this data should not be changed or touched**.**
+We can see above that the 0 values do not appear to have any sort of pattern. Before continuing, **it is important to note that these 0 values are only being treated as missing since it is known that poverty rates of 0 do not exist. If this were not the case, this data should not be changed or touched.**
 
 Since each row contains unique data on unique cities, it is not optimal to remove rows with missing values. Additionally, the data does not appear to be linearly correlated with other data points. Therefore, the KNN nearest neighbor method will be used.
 

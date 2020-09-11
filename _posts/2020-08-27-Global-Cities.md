@@ -69,7 +69,7 @@ The above two values clearly contain data which has maximums very far from the m
 
 Below, tables for the major ports per continent are created to determine the existence of possible outliers.
 
-```{r}
+```r
 # Plotting the major ports per continent with a mean and standard deviation line
 ggplot(data = globalCitiesData, 
        mapping = aes(x = Continent, y = Major.Ports)) +
@@ -85,7 +85,7 @@ ggplot(data = globalCitiesData,
 
 
 Above, we can see that there are points which most definitely lie outside of the mean and standard deviation lines. This is a strong indication that these are potential outliers and possibly incorrect information. To further check this, a boxplot can be made.
-```{r}
+```r
 # Box plot for the amount of major ports
 ggplot(globalCitiesData, aes(x=Continent, y=Major.Ports, group = Continent, fill=Continent)) +
   geom_boxplot(colour="black") +
@@ -98,7 +98,7 @@ ggplot(globalCitiesData, aes(x=Continent, y=Major.Ports, group = Continent, fill
 ![plot-1]({{site.baseurl}}/images/Global_Cities/Part_1/Plot_2.png)
 
 It can be seen that several outliers potentially exist; however, the large outlier located in Asia heavily skews the data. While many of the outliers can be explained by the existence of large portside cities, the largest outlier is difficult to come up with reasoning for. Removing potential outliers may lead to improved plots.
-```{r}
+```r
 # Replotting the data without the outliers
 ggplot(data = globalCitiesData[-which(globalCitiesData$Major.Ports>2.5),],
        mapping = aes(x = Continent, y = Major.Ports)) + 

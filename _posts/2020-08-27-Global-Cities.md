@@ -83,7 +83,7 @@ To further check for outliers, a boxplot can be made.
 
 Again, there appear to be large values skewing the distribution; removing them following the standard deviation line may lead to better plots.
 
-![plot-1]({{site.baseurl}}/images/Global_Cities/Part_1/Plot_4_c.png)
+![plot-1]({{site.baseurl}}/images/Global_Cities/Part_1/PLot_4_c.png)
 
 Removing large values skewing the distribution improved the graphs' quality, but we cannot be sure if removing them is actually a good idea. The outliers may be plausibly explained if we had an expert who understood this data better.
 

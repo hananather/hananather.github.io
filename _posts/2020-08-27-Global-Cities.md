@@ -1,9 +1,7 @@
 ---
 published: true
 ---
-
-
-**Contents**
+**In my first blog post I will perfrom Data Analysis on the Global Cities Dataset**
 * TOC
 {:toc}
 

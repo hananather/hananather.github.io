@@ -228,7 +228,7 @@ This graph compares the Long-term unemployed Rate and Proportion of High school 
 
 This example demonstrates the importance of using ratios/proportions instead of plotting raw values in this dataset. For the rest of the visualizations we will only use normalized variables.
 
-# Visualizations
+## Visualizations
 
 ```r
 x <- list(

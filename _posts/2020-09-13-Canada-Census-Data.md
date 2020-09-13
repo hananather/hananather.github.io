@@ -25,6 +25,7 @@ dim(mydata
 
 As we can see the HR 2016 Census data set contains over 105 variables and 127 observations. 
 
+---
 ### Checking for null values
 
 ```r
@@ -334,6 +335,7 @@ api_create(p, filename = "r-docs-Long-term Unemployement")
 
 This plot displays the Proportion of Post-secondary graduates on the x-axis, Long-term Unemployement Rate on the y-axis and the Average total income in 2015. As we can see observations with the lowest long-term unemployment and the highest proportion of post-secondary graduates have the highest average income.
 
+---
 # References
 
 Converting between Data Frames and Contingency Tables, Cookbook-r, n.d. [www.cookbook-r.com/Manipulating_data/Converting_between_data_frames_and_contingency_tables/](http://www.cookbook-r.com/Manipulating_data/Converting_between_data_frames_and_contingency_tables/). Accessed Nov. 6, 2019.

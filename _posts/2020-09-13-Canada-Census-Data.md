@@ -220,7 +220,7 @@ labs(
 
 ```
 
-![plot-1]({{site.baseurl}}/images/HR_Census_Data/Plot_1_d.png)
+![plot-1]({{site.baseurl}}/images/HR_Census_Data/Plot_3.png)
 
 
 

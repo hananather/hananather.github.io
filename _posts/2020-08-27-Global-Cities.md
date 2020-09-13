@@ -1,7 +1,7 @@
 ---
 published: true
 ---
-**In this first blog post we perfrom Data Analysis on the Global Cities Dataset**
+**In this first blog post we perfrom data analysis on the Global Cities Dataset**
 * TOC
 {:toc}
 

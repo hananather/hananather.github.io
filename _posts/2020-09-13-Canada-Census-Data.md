@@ -222,7 +222,7 @@ labs(
 
 ![plot-1]({{site.baseurl}}/images/HR_Census_Data/Plot_1_d.png)
 
-[PLOT_3]
+
 
 This graph compares the Long-term unemployed Rate and Proportion of High school graduates aged 25 to 29. From this graph, we can observe that the high school graduation rate is negatively correlated with long term unemployment. This is completely opposite from the previous graph. O**nce we normalize the data with respect to size, we can see that the high school graduation rate and Long-term unemployment have a negative relationship.** It is vital to note that we are not confusing correlation with causation. 
 
@@ -247,9 +247,7 @@ p
 ```
 
 {% raw %}
-
 <iframe width="900" height="800" frameborder="0" scrolling="no" src="[//plotly.com/~hananather/9.embed](notion://plotly.com/~hananather/9.embed)"></iframe>
-
 {% endraw %}
 
 As we can see from the above visualization, there seems to be a trend between the proportion of lone-parent families and High school graduates aged 25 to 29. There is a negative correlation between the two variables within this dataset. **However, this does not imply causation!!**
@@ -267,16 +265,13 @@ p
 ```
 
 {% raw %}
-
 <iframe width="900" height="800" frameborder="0" scrolling="no" src="[//plotly.com/~hananather/11.embed](notion://plotly.com/~hananather/11.embed)"></iframe>
-
 {% endraw %}
 
 This graph displays the relationship between the three variables we have explored in the dataset this far. The x-axis is the High school graduates rate, the y-axis is the proportion of Lone-parent families, and the z-axis the long-term unemployment rate. The trend we can notice from this graphic is that low rates of highscool graduation and high proportion of Lone-parent families have high unemploymentent rate. However, we are not making the mistake of confusing the correlation with causation!! There could be other factors that affect the distribution of the data.
 
 ---
 
-[PLOT_6]
 
 ```r
 p = plot_ly(data, x = ~HSG_RATE, y = ~AVE_PERS_INC,

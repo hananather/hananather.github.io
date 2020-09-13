@@ -105,7 +105,7 @@ The data set at first glance seems to contain outliers; however, at a closer loo
 
 Additionally, there are "##div/0" values in some of the fields. In this data, we are observing different Geo Codes in Canada. Naturally, there is a lot of variation between them, especially if they are not the same size. Therefore, one solution might be to find values from similar geocodes and fill them in. However, this approach gets more complex. How do you really pick which geo code is the "best" approximation. The selection process becomes even more challenging when we realize that the geocodes differ in sizes.
 
-# Part Two: **Data Dictionary and Source of the Data**
+# Part Two: Data Dictionary and Source of the Data
 
 In the first task we are ask to create a “data dictionary” to explain the different fields and variables. It also asks us find a source for the data set online.
 

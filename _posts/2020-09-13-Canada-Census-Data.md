@@ -286,16 +286,13 @@ p
 ```
 
 {% raw %}
-
 <iframe width="900" height="800" frameborder="0" scrolling="no" src="[//plotly.com/~hananather/13.embed](notion://plotly.com/~hananather/11.embed)"></iframe>
-
 {% endraw %}
 
 In this graph, High school graduates aged 25 to 29 was chosen as the independent variable and we want to examine if there is some relationship between the Average total income in 2015 that is present in this dataset. We can see that the variance of the average income increases a lot when propotion of highschool gradudates is above 80%. This makes logical sense because some proportion of highschool graduates will go on to university, and others may not, and this may result in the variation of average total income. **However, there may be even more hidden variables to consider, and we should not draw any strong conclusions based on this simple plot.**
 
 ---
 
-[PLOT_7]
 
 ```r
 a = ggplot(data, aes(x= PSG_RATE, y = UE_RATE))
@@ -332,9 +329,7 @@ api_create(p, filename = "r-docs-Long-term Unemployement")
 ```
 
 {% raw %}
-
 <iframe width="900" height="800" frameborder="0" scrolling="no" src="[//plotly.com/~hananather/15.embed](notion://plotly.com/~hananather/15.embed)"></iframe>
-
 {% endraw %}
 
 This plot displays the Proportion of Post-secondary graduates on the x-axis, Long-term Unemployement Rate on the y-axis and the Average total income in 2015. As we can see observations with the lowest long-term unemployment and the highest proportion of post-secondary graduates have the highest average income.

@@ -247,7 +247,7 @@ p
 ```
 
 {% raw %}
-<iframe width="900" height="800" frameborder="0" scrolling="no" src="//plotly.com/~hananather/9.embed)"></iframe>
+<iframe width="900" height="800" frameborder="0" scrolling="no" src="//plotly.com/~hananather/9.embed"></iframe>
 {% endraw %}
 
 As we can see from the above visualization, there seems to be a trend between the proportion of lone-parent families and High school graduates aged 25 to 29. There is a negative correlation between the two variables within this dataset. **However, this does not imply causation!!**
@@ -265,7 +265,7 @@ p
 ```
 
 {% raw %}
-<iframe width="900" height="800" frameborder="0" scrolling="no" src="//plotly.com/~hananather/11.embed)"></iframe>
+<iframe width="900" height="800" frameborder="0" scrolling="no" src="//plotly.com/~hananather/11.embed"></iframe>
 {% endraw %}
 
 This graph displays the relationship between the three variables we have explored in the dataset this far. The x-axis is the High school graduates rate, the y-axis is the proportion of Lone-parent families, and the z-axis the long-term unemployment rate. The trend we can notice from this graphic is that low rates of highscool graduation and high proportion of Lone-parent families have high unemploymentent rate. However, we are not making the mistake of confusing the correlation with causation!! There could be other factors that affect the distribution of the data.
@@ -286,7 +286,7 @@ p
 ```
 
 {% raw %}
-<iframe width="900" height="800" frameborder="0" scrolling="no" src="//plotly.com/~hananather/11.embed)"></iframe>
+<iframe width="900" height="800" frameborder="0" scrolling="no" src="//plotly.com/~hananather/13.embed"></iframe>
 {% endraw %}
 
 In this graph, High school graduates aged 25 to 29 was chosen as the independent variable and we want to examine if there is some relationship between the Average total income in 2015 that is present in this dataset. We can see that the variance of the average income increases a lot when propotion of highschool gradudates is above 80%. This makes logical sense because some proportion of highschool graduates will go on to university, and others may not, and this may result in the variation of average total income. **However, there may be even more hidden variables to consider, and we should not draw any strong conclusions based on this simple plot.**
@@ -329,7 +329,7 @@ api_create(p, filename = "r-docs-Long-term Unemployement")
 ```
 
 {% raw %}
-<iframe width="900" height="800" frameborder="0" scrolling="no" src="//plotly.com/~hananather/15.embed)"></iframe>
+<iframe width="900" height="800" frameborder="0" scrolling="no" src="//plotly.com/~hananather/15.embed"></iframe>
 {% endraw %}
 
 This plot displays the Proportion of Post-secondary graduates on the x-axis, Long-term Unemployement Rate on the y-axis and the Average total income in 2015. As we can see observations with the lowest long-term unemployment and the highest proportion of post-secondary graduates have the highest average income.

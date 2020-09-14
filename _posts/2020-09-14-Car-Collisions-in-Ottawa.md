@@ -14,9 +14,8 @@ The data also lists locations for each collision. It would be useful to check wh
 
 ---
 
-# Part One: Can we Trust This Data?
+# Part One: Preliminary Data Inspection?
 
-# Preliminary Data Inspection
 
 From a primary visual inspection of the data, it can be seen that there are some issues present. First of all, the date column contains many entries with “#######” instead of an actual date in the original file.
 This also raises questions on the data itself. Are all of the entries valid?
@@ -85,7 +84,7 @@ Now we can move on to visualizing the data
 
 ---
 
-# Visualizing and Understanding the Data
+# Part Two: Visualizing and Understanding the Data
 
 Before we move forward with analysis, one crucial fact to note is we can not draw any causal conclusions based on this analysis. There could be other factors that affect the data. 
 
@@ -155,7 +154,7 @@ This plot displays the three categories of collision classification present in t
 
 ---
 
-### In what weather conditions do most collisions happen in?
+## In what weather conditions do most collisions happen in?
 
 ```r
 sum_enviro= data %>%
@@ -173,7 +172,7 @@ The above pie chart displays the number of accidents which occurred in a particu
 
 ---
 
-### Under what road surface conditions do most collisions happen in?
+## Under what road surface conditions do most collisions happen in?
 
 ```r
 p = ggplot(data,aes(x = Road_Surface)) +
@@ -196,8 +195,8 @@ The histogram above shows that most of the accidents that were recorded in this 
 
 # Appendix: Additional Plots
 
-### Distribution of Impact Type, Traffic Controls, and Time of Day
-
+** Distribution of Impact Type, Traffic Controls, and Time of Day
+**
 ```r
 colors <- c('rgb(211,94,96)', 'rgb(128,133,133)', 'rgb(144,103,167)', 'rgb(171,104,87)', 'rgb(114,147,203)') # (Columbia U, n.d.)
 sum_Traffic_Control= data %>%
@@ -231,8 +230,8 @@ We see that most of the accidents occurred when there were no traffic controls. 
 
 ---
 
-### What Environment and Road Surface conditions lead to most accidents?
-
+**What Environment and Road Surface conditions lead to most accidents?
+**
 ```r
 p=ggplot(data, aes(x=Environment,y= Road_Surface)) 
 p+ geom_count()+  theme(axis.text.x = element_text(angle = 45, hjust = 1))+
@@ -252,8 +251,8 @@ theme(panel.background = element_rect(fill = 'white'),
 
 ---
 
-### Is there a relationship between Time of Day and Collision location?
-
+**Is there a relationship between Time of Day and Collision location?
+**
 ```r
 p=ggplot(data, aes(x=Light, y= Collision_Location )) 
 p+ geom_bin2d()+ theme(axis.text.x = element_text(angle = 45, hjust = 1))+
@@ -272,16 +271,16 @@ p+ geom_bin2d()+ theme(axis.text.x = element_text(angle = 45, hjust = 1))+
 
 ---
 
-### Are there any patterns in between Location of the Collision and the Type of Impact?
-
+** Are there any patterns in between Location of the Collision and the Type of Impact?
+**
 ```r
 p= plot_ly(data, x = ~Impact_type, y = ~Collision_Location)
 ```
 
 ---
 
-### What is the relationship between Time of Day (Light), Collision Location, and Environment
-
+**What is the relationship between Time of Day (Light), Collision Location, and Environment
+**
 ```r
 q = ggplot(data, aes(x=Light, y= Collision_Location)) +
  geom_raster(aes(fill=Environment),
@@ -293,8 +292,8 @@ q
 
 ---
 
-### Impact Type and Time of the day
-
+**Impact Type and Time of the day
+**
 ```r
 p=ggplot(data, aes(x=Light, y= Impact_type )) 
 p+ geom_bin2d()+ theme(axis.text.x = element_text(angle = 45, hjust = 1))+
@@ -313,8 +312,8 @@ p+ geom_bin2d()+ theme(axis.text.x = element_text(angle = 45, hjust = 1))+
 
 ---
 
-### Impact Type and Traffic Control
-
+**Impact Type and Traffic Control
+**
 ```r
 p=ggplot(data, aes(x=Traffic_Control,y= Impact_type)) 
 p+geom_bin2d() + theme(axis.text.x = element_text(angle = 45, hjust = 1))+

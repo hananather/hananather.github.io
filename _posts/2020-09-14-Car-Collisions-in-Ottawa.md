@@ -1,5 +1,5 @@
 ---
-published: false
+published: true
 ---
 **This is another Project I worked on in MAT 4376 at uOttawa.**
 * TOC

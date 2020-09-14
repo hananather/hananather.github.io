@@ -91,18 +91,20 @@ Before we move forward with analysis, one crucial fact to note is we can not dra
 ## What time do most accidents occur at?
 
 ```r
-
-par(mfrow=c(1,2)) 
-
 # Scatter plot for time of collisions
-ggplot(data = collisionsData, mapping = aes(x=hm, y =Record)) + 
+p =ggplot(data = collisionsData, mapping = aes(x=hm, y =Record)) + 
   geom_bar(stat='identity') + 
   xlab("Time of incident") + 
   ylab("Record Number")+ 
   ggtitle("Time at Which Collision Occured")+
   scale_x_datetime(date_labels = "%H:%M %p")+ 
   theme_bw()
+p
+```
+[INSET Pic]
 
+
+```r
 ggplot(data = collisionsData, mapping = aes(x = hm)) + 
   geom_freqpoly() + xlab("Time") + ylab("Record") + 
   ggtitle("Time of Colisions") +
@@ -110,6 +112,9 @@ ggplot(data = collisionsData, mapping = aes(x = hm)) +
   theme_linedraw()
 
 ```
+{% raw %}
+<iframe width="900" height="800" frameborder="0" scrolling="no" src="//plotly.com/~hananather/21.embed"></iframe>
+{% endraw %}
 
 From the above graphs, it can be seen that time is a factor in terms of collision frequency. Note that early morning hours between midnight and 6:00 am have the least amount of collisions. This could be due to the fact that most people are sleeping and therefore, there are fewer vehicles and people on the road. Furthermore, it can be seen that the most amount of collisions occurs in the late afternoon between 3:00 pm and 6:00 pm. This could be due to high traffic and people returning from work; however, more analysis is required before any conclusions can be made. **We cannot make any causal conclusions form this analysis.** 
 
@@ -128,6 +133,9 @@ coll_chart_data= data %>%
          yaxis = list(showgrid = FALSE, zeroline = FALSE, showticklabels = FALSE)) 
 
 ```
+{% raw %}
+<iframe width="900" height="800" frameborder="0" scrolling="no" src="//plotly.com/~hananather/21.embed"></iframe>
+{% endraw %}
 
 As we can see most of the accidents according to our data set occur at non-intersection locations. There
 
@@ -150,6 +158,8 @@ ggplot(data,aes(x = Collision_Classification)) +
   theme_linedraw()
 ```
 
+<iframe width="900" height="800" frameborder="0" scrolling="no" src="//plotly.com/~hananather/23.embed"></iframe>
+
 This plot displays the three categories of collision classification present in this dataset and their respective counts per category. As we can see, most of the collisions recorded in this dataset are P.D only (property damage).
 
 ---
@@ -167,6 +177,8 @@ p <- plot_ly(sum_enviro, labels = ~Environment, values = ~count, type = 'pie') %
 p
 
 ```
+
+<iframe width="900" height="800" frameborder="0" scrolling="no" src="//plotly.com/~hananather/25.embed"></iframe>
 
 The above pie chart displays the number of accidents which occurred in a particular environment. As we can see, in this dataset, most of the crashes seem to have occurred in a clear environment.
 
@@ -186,6 +198,7 @@ p = ggplot(data,aes(x = Road_Surface)) +
   theme(axis.text.x = element_text(angle = 45, hjust = 1))
 p
 ```
+<iframe width="900" height="800" frameborder="0" scrolling="no" src="//plotly.com/~hananather/27.embed"></iframe>
 
 The histogram above shows that most of the accidents that were recorded in this dataset occurred in dry conditions.
 
@@ -224,6 +237,7 @@ p <- plot_ly() %>%
          yaxis = list(showgrid = FALSE, zeroline = FALSE, showticklabels = FALSE)) # (R Stat co., 2019), (Plotly, 2019)
 p
 ```
+<iframe width="900" height="800" frameborder="0" scrolling="no" src="//plotly.com/~hananather/29.embed"></iframe>
 
 We can visualize three different variables from the data set; Traffic Controls, Impact type, and Light.
 We see that most of the accidents occurred when there were no traffic controls. Furthermore, the majority of the accidents occurred in daylight. Additionally, we can see that the majority of the impact types are rear-end hits.

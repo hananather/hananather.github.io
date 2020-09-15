@@ -494,7 +494,7 @@ p <- plot_ly(globalCitiesData, x = ~ Life.Expectancy,
 p
 ```
 {% raw %}
-<iframe width="900" height="800" frameborder="0" scrolling="no" src="//plotly.com/~hananather/7.embed"></iframe>
+<iframe width="800" height="500" frameborder="0" scrolling="no" src="//plotly.com/~hananather/7.embed"></iframe>
 {% endraw %}
 
 

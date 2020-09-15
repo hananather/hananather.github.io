@@ -44,7 +44,7 @@ fig
 ```
 ![Alt Text]({{site.baseurl}}/images/Ottawa_Collision_Data/map.gif)
 
-After doing a little googling, I realized that these are not latitude and longitude coordinates, so we cannot see anything on the map. The coordinates seem to be a bit of a mystery to me. It would be useful to find a tool or formula (?), which would allow us to convert them into latitude and longitude. I must admit my knowledge when it comes to geocoding is pretty limited; however, this could be an exciting way to learn more.
+After doing a little googling, I realized that these are not latitude and longitude coordinates, so we cannot see anything on the map. The coordinates seem to be a bit of a mystery to me. It would be useful to find a tool or formula (?), which would allow us to convert them into latitude and longitude. I must admit my knowledge when it comes to Geocoding is pretty limited.
 
 ---
 
@@ -261,7 +261,7 @@ theme(panel.background = element_rect(fill = 'white'),
                                      size=1.5)) # (Columbia U, n.d.), (R Stat co., 2019)
 
 ```
-![plot-1]({{site.baseurl}}/images/Ottawa_Collision_Data/plot_4.png)
+![plot-1]({{site.baseurl}}/images/Ottawa_Collision_Data/Plot_4.png)
 
 ---
 
@@ -281,6 +281,7 @@ p+ geom_bin2d()+ theme(axis.text.x = element_text(angle = 45, hjust = 1))+
           axis.line.y = element_line(colour = "indianred4", 
                                      size=1.5)) # (Columbia U, n.d.), (Stagraph, 2018), (R Stat co., 2019)
 ```
+![plot-1]({{site.baseurl}}/images/Ottawa_Collision_Data/Plot_5.png)
 
 ---
 
@@ -288,6 +289,7 @@ p+ geom_bin2d()+ theme(axis.text.x = element_text(angle = 45, hjust = 1))+
 ```r
 p= plot_ly(data, x = ~Impact_type, y = ~Collision_Location)
 ```
+![plot-1]({{site.baseurl}}/images/Ottawa_Collision_Data/Plot_9.png)
 
 ---
 
@@ -300,6 +302,7 @@ q = ggplot(data, aes(x=Light, y= Collision_Location)) +
 
 q
 ```
+![plot-1]({{site.baseurl}}/images/Ottawa_Collision_Data/Plot_6.png)
 
 ---
 
@@ -319,6 +322,7 @@ p+ geom_bin2d()+ theme(axis.text.x = element_text(angle = 45, hjust = 1))+
           axis.line.y = element_line(colour = "darkorange4", 
                                      size=1.5))
 ```
+![plot-1]({{site.baseurl}}/images/Ottawa_Collision_Data/Plot_7.png)
 
 ---
 
@@ -338,6 +342,7 @@ p+geom_bin2d() + theme(axis.text.x = element_text(angle = 45, hjust = 1))+
           axis.line.y = element_line(colour = "darkorange", 
                                      size=1.5)) 
 ```
+![plot-1]({{site.baseurl}}/images/Ottawa_Collision_Data/Plot_7.png)
 
 ---
 

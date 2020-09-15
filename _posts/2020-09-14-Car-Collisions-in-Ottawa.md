@@ -158,7 +158,7 @@ ggplot(data,aes(x = Collision_Classification)) +
   theme_linedraw()
 ```
 
-<iframe width="900" height="800" frameborder="0" scrolling="no" src="//plotly.com/~hananather/23.embed"></iframe>
+<iframe width="800" height="500" frameborder="0" scrolling="no" src="//plotly.com/~hananather/23.embed"></iframe>
 
 This plot displays the three categories of collision classification present in this dataset and their respective counts per category. As we can see, most of the collisions recorded in this dataset are P.D only (property damage).
 

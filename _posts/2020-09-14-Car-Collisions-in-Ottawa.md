@@ -178,7 +178,7 @@ p
 
 ```
 
-<iframe width="900" height="800" frameborder="0" scrolling="no" src="//plotly.com/~hananather/25.embed"></iframe>
+<iframe width="800" height="500" frameborder="0" scrolling="no" src="//plotly.com/~hananather/25.embed"></iframe>
 
 The above pie chart displays the number of accidents which occurred in a particular environment. As we can see, in this dataset, most of the crashes seem to have occurred in a clear environment.
 
@@ -198,7 +198,7 @@ p = ggplot(data,aes(x = Road_Surface)) +
   theme(axis.text.x = element_text(angle = 45, hjust = 1))
 p
 ```
-<iframe width="900" height="800" frameborder="0" scrolling="no" src="//plotly.com/~hananather/27.embed"></iframe>
+<iframe width="800" height="500" frameborder="0" scrolling="no" src="//plotly.com/~hananather/27.embed"></iframe>
 
 The histogram above shows that most of the accidents that were recorded in this dataset occurred in dry conditions.
 
@@ -208,8 +208,7 @@ The histogram above shows that most of the accidents that were recorded in this 
 
 # Appendix: Additional Plots
 
-** Distribution of Impact Type, Traffic Controls, and Time of Day
-**
+** Distribution of Impact Type, Traffic Controls, and Time of Day**
 ```r
 colors <- c('rgb(211,94,96)', 'rgb(128,133,133)', 'rgb(144,103,167)', 'rgb(171,104,87)', 'rgb(114,147,203)') # (Columbia U, n.d.)
 sum_Traffic_Control= data %>%
@@ -244,8 +243,7 @@ We see that most of the accidents occurred when there were no traffic controls. 
 
 ---
 
-**What Environment and Road Surface conditions lead to most accidents?
-**
+**What Environment and Road Surface conditions lead to most accidents?**
 ```r
 p=ggplot(data, aes(x=Environment,y= Road_Surface)) 
 p+ geom_count()+  theme(axis.text.x = element_text(angle = 45, hjust = 1))+
@@ -265,8 +263,7 @@ theme(panel.background = element_rect(fill = 'white'),
 
 ---
 
-**Is there a relationship between Time of Day and Collision location?
-**
+**Is there a relationship between Time of Day and Collision location?**
 ```r
 p=ggplot(data, aes(x=Light, y= Collision_Location )) 
 p+ geom_bin2d()+ theme(axis.text.x = element_text(angle = 45, hjust = 1))+
@@ -285,16 +282,14 @@ p+ geom_bin2d()+ theme(axis.text.x = element_text(angle = 45, hjust = 1))+
 
 ---
 
-** Are there any patterns in between Location of the Collision and the Type of Impact?
-**
+**Are there any patterns in between Location of the Collision and the Type of Impact?**
 ```r
 p= plot_ly(data, x = ~Impact_type, y = ~Collision_Location)
 ```
 
 ---
 
-**What is the relationship between Time of Day (Light), Collision Location, and Environment
-**
+**What is the relationship between Time of Day (Light), Collision Location, and Environment**
 ```r
 q = ggplot(data, aes(x=Light, y= Collision_Location)) +
  geom_raster(aes(fill=Environment),
@@ -306,8 +301,7 @@ q
 
 ---
 
-**Impact Type and Time of the day
-**
+**Impact Type and Time of the day**
 ```r
 p=ggplot(data, aes(x=Light, y= Impact_type )) 
 p+ geom_bin2d()+ theme(axis.text.x = element_text(angle = 45, hjust = 1))+
@@ -326,8 +320,7 @@ p+ geom_bin2d()+ theme(axis.text.x = element_text(angle = 45, hjust = 1))+
 
 ---
 
-**Impact Type and Traffic Control
-**
+**Impact Type and Traffic Control**
 ```r
 p=ggplot(data, aes(x=Traffic_Control,y= Impact_type)) 
 p+geom_bin2d() + theme(axis.text.x = element_text(angle = 45, hjust = 1))+

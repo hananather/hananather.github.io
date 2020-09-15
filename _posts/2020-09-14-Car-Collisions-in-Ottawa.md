@@ -102,7 +102,8 @@ p =ggplot(data = collisionsData, mapping = aes(x=hm, y =Record)) +
   theme_bw()
 p
 ```
-[INSET Pic]
+![plot-1]({{site.baseurl}}/images/Ottawa_Collision_Data/Plot_1.png)
+
 
 
 ```r
@@ -114,7 +115,7 @@ ggplot(data = collisionsData, mapping = aes(x = hm)) +
 
 ```
 {% raw %}
-<iframe width="900" height="800" frameborder="0" scrolling="no" src="//plotly.com/~hananather/21.embed"></iframe>
+<iframe width="800" height="500" frameborder="0" scrolling="no" src="//plotly.com/~hananather/19.embed"></iframe>
 {% endraw %}
 
 From the above graphs, it can be seen that time is a factor in terms of collision frequency. Note that early morning hours between midnight and 6:00 am have the least amount of collisions. This could be due to the fact that most people are sleeping and therefore, there are fewer vehicles and people on the road. Furthermore, it can be seen that the most amount of collisions occurs in the late afternoon between 3:00 pm and 6:00 pm. This could be due to high traffic and people returning from work; however, more analysis is required before any conclusions can be made. **We cannot make any causal conclusions form this analysis.** 
@@ -135,7 +136,7 @@ coll_chart_data= data %>%
 
 ```
 {% raw %}
-<iframe width="900" height="800" frameborder="0" scrolling="no" src="//plotly.com/~hananather/21.embed"></iframe>
+<iframe width="800" height="500" frameborder="0" scrolling="no" src="//plotly.com/~hananather/21.embed"></iframe>
 {% endraw %}
 
 As we can see most of the accidents according to our data set occur at non-intersection locations. There
@@ -342,7 +343,7 @@ p+geom_bin2d() + theme(axis.text.x = element_text(angle = 45, hjust = 1))+
           axis.line.y = element_line(colour = "darkorange", 
                                      size=1.5)) 
 ```
-![plot-1]({{site.baseurl}}/images/Ottawa_Collision_Data/Plot_7.png)
+![plot-1]({{site.baseurl}}/images/Ottawa_Collision_Data/Plot_8.png)
 
 ---
 

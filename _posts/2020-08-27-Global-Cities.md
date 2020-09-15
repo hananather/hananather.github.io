@@ -396,8 +396,9 @@ ggplot(data = globalCitiesData,
   ggtitle("Life Expectancy versus GDP") + 
   theme_bw()
 ```
-![plot-1]({{site.baseurl}}/images/Global_Cities/plot-1.png)
-
+{% raw %}
+<iframe width="900" height="800" frameborder="0" scrolling="no" src="//plotly.com/~hananather/34.embed"></iframe>
+{% endraw %}
 
 
 The plot of life expectancy versus the unemployment rate is built in the same way as the one above, which uses GDP. A scatter plot is optimal to display the potential relationship. Since the points can take on any value in a certain range, visualizations of the categorical kinds such as bar plots would not convey the information in the same effective manner.
@@ -409,7 +410,10 @@ ggplot(globalCitiesData, mapping = aes(x = Life.Expectancy)) +
   ggtitle("Life Expectancy versus Unemployment Rate") + 
   theme_bw()
 ```
-![plot-1]({{site.baseurl}}/images/Global_Cities/plot-2.png)
+
+{% raw %}
+<iframe width="900" height="800" frameborder="0" scrolling="no" src="//plotly.com/~hananather/36.embed"></iframe>
+{% endraw %}
 
 
 When visualizing a categorical and a continuous variable, bar plots can reveal a lot of information. The below plot gives the city population sizes for all the cities and has ordered them from largest to smallest. Finally, the legend also displays the Continent of each city once again. This visualization allows one to see which regions have the most populous cities and the sizes of each city exactly. A scatter plot in this scenario would show very similar data, but would not as effectively communicate the size differences in population per city due to the fact that this would be showed simply with the height of the point rather than with the dimensions of a bar of data as shown below.

@@ -449,8 +449,6 @@ ggplot(globalCitiesData, aes(x = City.Area..km2., y =City.Population..millions.,
 <iframe width="800" height="500" frameborder="0" scrolling="no" src="//plotly.com/~hananather/40.embed"></iframe>
 {% endraw %}
 
-## Interactive Visualizations
-
 
 The following plot shows the air quality within a city versus the GDP per Capita per person. This data was displayed in the form of a bubble plot since each city has values for air quality and gdp which both can take on any variable rather than being of a categorical nature. Furthermore, the size of each point changes based on the size of the population in each city. This helps provide further information and context to each value. 
 The data for air quality was transformed in order to clarify the message of the graph further. The air quality index works by listing air quality on a scale of 0 to 500, with 0 being good and 500 being hazardous (US EPA, 2017). The problem with this is that using these values, one who is not familiar with the air quality index could believe that an extremely polluted city like Dehli for example, has good air quality since it is listed as 200 rather than understanding that this value is a bad sign. Therefore, a new column sorting the air quality is created to reduce confusion.

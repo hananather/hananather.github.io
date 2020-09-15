@@ -367,9 +367,6 @@ It can be seen that the minimum value is now 0.01, the missing values have been 
 # Part Two: Visualizations
 
 
-
-## Basic Visualizations
-
 The first step involves reading in the data, and bringing in the libraries which will be used as well.
 
 ```R
@@ -397,7 +394,7 @@ ggplot(data = globalCitiesData,
   theme_bw()
 ```
 {% raw %}
-<iframe width="900" height="800" frameborder="0" scrolling="no" src="//plotly.com/~hananather/34.embed"></iframe>
+<iframe width="800" height="500" frameborder="0" scrolling="no" src="//plotly.com/~hananather/34.embed"></iframe>
 {% endraw %}
 
 
@@ -412,7 +409,7 @@ ggplot(globalCitiesData, mapping = aes(x = Life.Expectancy)) +
 ```
 
 {% raw %}
-<iframe width="900" height="800" frameborder="0" scrolling="no" src="//plotly.com/~hananather/36.embed"></iframe>
+<iframe width="800" height="500" frameborder="0" scrolling="no" src="//plotly.com/~hananather/36.embed"></iframe>
 {% endraw %}
 
 
@@ -431,7 +428,10 @@ ggplot(globalCitiesData,
 
 # (Chang, 2009), (zero323, 2015)
 ```
-![plot-1]({{site.baseurl}}/images/Global_Cities/plot-3.png)
+
+{% raw %}
+<iframe width="800" height="500" frameborder="0" scrolling="no" src="//plotly.com/~hananather/38.embed"></iframe>
+{% endraw %}
 This next plot shows the city areas and population sizes per continent. This information is useful to split up because different regions tend to have distinct architectures and styles of living and differing amounts of physical space to expand in. This means that splitting the data per continent can help show the information in a context where it is easier to compare each city to those in geographically similar situations.
 ```r
 # Plotting city areas and city population sizes split by continent
@@ -445,7 +445,9 @@ ggplot(globalCitiesData, aes(x = City.Area..km2., y =City.Population..millions.,
 
 # (Chang,2009)
 ```
-![plot-1]({{site.baseurl}}/images/Global_Cities/plot-4.png)
+{% raw %}
+<iframe width="800" height="500" frameborder="0" scrolling="no" src="//plotly.com/~hananather/40.embed"></iframe>
+{% endraw %}
 
 ## Interactive Visualizations
 

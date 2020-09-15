@@ -102,7 +102,7 @@ p =ggplot(data = collisionsData, mapping = aes(x=hm, y =Record)) +
   theme_bw()
 p
 ```
-![plot-1]({{site.baseurl}}/images/Ottawa_Collision_Data/Plot_1.png)
+![plot-1]({{site.baseurl}}/images/Ottawa_Collision_Data/Plot_1_a.png)
 
 
 

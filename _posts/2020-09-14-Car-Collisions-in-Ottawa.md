@@ -260,6 +260,7 @@ theme(panel.background = element_rect(fill = 'white'),
                                      size=1.5)) # (Columbia U, n.d.), (R Stat co., 2019)
 
 ```
+![plot-1]({{site.baseurl}}/images/Ottawa Collision Data/plot_4.png)
 
 ---
 

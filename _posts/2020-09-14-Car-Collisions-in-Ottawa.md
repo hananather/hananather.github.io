@@ -42,7 +42,7 @@ fig <- fig %>%
 
 fig
 ```
-![Alt Text]({{site.baseurl}}/images/Ottawa Collision Data/map.gif)
+![Alt Text]({{site.baseurl}}/images/Ottawa_Collision_Data/map.gif)
 
 After doing a little googling, I realized that these are not latitude and longitude coordinates, so we cannot see anything on the map. The coordinates seem to be a bit of a mystery to me. It would be useful to find a tool or formula (?), which would allow us to convert them into latitude and longitude. I must admit my knowledge when it comes to geocoding is pretty limited; however, this could be an exciting way to learn more.
 
@@ -261,7 +261,7 @@ theme(panel.background = element_rect(fill = 'white'),
                                      size=1.5)) # (Columbia U, n.d.), (R Stat co., 2019)
 
 ```
-![plot-1]({{site.baseurl}}/images/Ottawa Collision Data/plot_4.png)
+![plot-1]({{site.baseurl}}/images/Ottawa_Collision_Data/plot_4.png)
 
 ---
 

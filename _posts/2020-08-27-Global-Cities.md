@@ -364,7 +364,7 @@ It can be seen that the minimum value is now 0.01, the missing values have been 
 
 
 
-# Part Two: Visualizations
+# Part Two: Interactive Visualizations
 
 
 The first step involves reading in the data, and bringing in the libraries which will be used as well.

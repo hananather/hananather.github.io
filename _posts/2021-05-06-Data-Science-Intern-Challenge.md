@@ -2,7 +2,28 @@
 published: true
 ---
 ## Fall 2021 Data Science Intern Challenge 
-    
+ 
+# Preliminary Work
+
+## What we know about this dataset: 
+- There are 100 sneaker stores in this data
+- each of these shops only sells one kind of sneaker
+- average order value (AOV) is $3145.13
+
+**Problem Statement:** Sneakers are a relatively cheap item, given that these shops are selling sneakers, something seems to be wrong in our analysis. Our objective is to figure out what could be skewing the AOV and we can fix it.
+
+
+```python
+data = pd.read_csv('sneaker_data.csv')
+```
+
+
+```python
+data.head()
+```
+ 
+ 
+ 
 <div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {

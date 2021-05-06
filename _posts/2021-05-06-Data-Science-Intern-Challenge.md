@@ -106,9 +106,107 @@ data.head()
 </table>
 </div>
 
+```python
+data.shape
+```
 
 
 
+
+    (5000, 7)
+
+
+
+
+```python
+print(data['created_at'].min())
+print(data['created_at'].max())
+```
+
+    2017-03-01 0:08
+    2017-03-30 9:55
+
+
+## Verify that our data contains no missing values:
+
+
+```python
+msno.matrix(data)
+```
+
+
+![png](output_11_1.png)
+
+
+
+```python
+data.isnull().sum()
+```
+
+
+
+
+    order_id          0
+    shop_id           0
+    user_id           0
+    order_amount      0
+    total_items       0
+    payment_method    0
+    created_at        0
+    dtype: int64
+
+
+
+- The missing value matrix allows us to visually see if the missing values in the dataset follow any pattern.
+
+- **There are no missing values in this dataset.**
+
+# 1a)
+
+## Investigating the Flaw of Averages
+
+
+```python
+# counts the number of unique shops in our data
+print("Numbers of unique shops: "+ str(len(data.shop_id.unique())))
+
+# calculate summary statistics of order_amount column
+data.order_amount.describe()
+```
+
+    Numbers of unique shops: 100
+
+
+
+
+
+    count      5000.000000
+    mean       3145.128000
+    std       41282.539349
+    min          90.000000
+    25%         163.000000
+    50%         284.000000
+    75%         390.000000
+    max      704000.000000
+    Name: order_amount, dtype: float64
+
+
+
+**Therefore, we can verify that:** 
+
+- There are 100 unique stores in this dataset
+- and the AOV is indeed 3145.13 dollars
+
+## However! 
+### Looking at the summary statistics of ```order_amount``` column raises red flags 
+*  The **Standard Deviation (SD) of AOV is 41,282.54 dollars**, which is very large relative to the mean
+* #### The **median order value is 284 dollars** while the max order value in our data set is $704,000 dollars!
+
+This tells us us that the order amounts are spread out over an **extremely wide range** since the ***SD is 41,282.54*** and although, 50% of the orders are below 284 dollars (and 75% orders are below  390.00)
+
+Based on these facts, we have evidence which indicates our data may contain outliers..
+
+## Outlier Detection
 
 
 

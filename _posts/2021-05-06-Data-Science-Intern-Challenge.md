@@ -442,7 +442,7 @@ metrics_calculator(data)
 - There is only one order in the dataset where 8 items were ordered, which explains the NaN Standard deviation. 
 - all orders where 2000 items were ordered were valued at 704,000 which explains the 0 Standard Deviation
 
-# Conclusion 
+## Conclusion 
 
 Grouping the orders based on total items in order seems to give us more reasonable AOVs. However, the standard deviation is still relatively high. There is massive variation in order amounts, even when controlled for total items in the order. 
 

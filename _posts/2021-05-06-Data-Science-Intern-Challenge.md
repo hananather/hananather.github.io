@@ -217,7 +217,7 @@ fig = px.scatter(data, x="created_at",
 ```
 
 {% raw %}
-<iframe width="900" height="800" frameborder="0" scrolling="no" src="//plotly.com/~hananather/44.embed"></iframe>
+<iframe width="900" height="500" frameborder="0" scrolling="no" src="//plotly.com/~hananather/44.embed"></iframe>
 {% endraw %}
 
 **Immediately we can make note of several things about the data:**
@@ -228,8 +228,7 @@ fig = px.scatter(data, x="created_at",
     * this shop also seems to have relatively high ```order_amount```, compared to the rest of the orders
     * however unlike **shop_id = 42**, the order **total_item** are in the range of anywhere from 1-3  (need to verify this more rigorously)
     
-```python
-```
+
 
 
 ```python

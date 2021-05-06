@@ -449,9 +449,8 @@ Grouping the orders based on total items in order seems to give us more reasonab
 The *Median Order Value (MOV)* gives us additional information about the distribution of ```order_amounts```. The MOV tells us that 50% of the orders amounts were above the median, and 50% were below. However, the median can be a tricky metric when viewed in isolation. **An increase in the median order value does not indicate whether or not sales went overall**. Median is just the middle value of a set of numbers. Rather than tunnel visioning on a single metric, viewing at the AOV, MOV, and the SD in combination leads to a richer understanding of the distribution of ```order_amounts```. The gap between the MOV and AOV gives a rough estimate of the skew in the data distribution. Additionally, the SD gives information about how much the order values vary.
 Ultimately, the improved understanding of data allows Merchants and the Shopify Team to make more informed decisions.
 
-#    ------------------------  QUESTION TWO  ------------------------
 
-# 1a)
+# Question 2
 ### How many orders were shipped by Speedy Express in total?
 
 

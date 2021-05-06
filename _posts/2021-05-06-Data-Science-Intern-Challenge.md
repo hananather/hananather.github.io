@@ -399,7 +399,7 @@ There are two main problems which skew the distribution of ```order_amount```:
 
 # 1c) What is its value?
 
-## Calculating the Improved Metrics 
+**Calculating the Improved Metrics**
 
 
 ```python
@@ -451,7 +451,7 @@ Ultimately, the improved understanding of data allows Merchants and the Shopify 
 
 
 # Question 2
-### How many orders were shipped by Speedy Express in total?
+**How many orders were shipped by Speedy Express in total?**
 
 
 ```sql
@@ -465,7 +465,7 @@ There were 54 orders shipped by Speedy Express.
 
 # 1b)
 
-### What is the last name of the employee with the most orders?
+**What is the last name of the employee with the most orders?**
 
 ```sql
 SELECT LastName, COUNT(Orders.EmployeeID)
@@ -479,7 +479,7 @@ The last of of the employee with the most orders is "Peacock".
 
 # 1c)
 
-## What product was ordered most by customers in Germany?
+**What product was ordered most by customers in Germany?**
 
 
 There can be two possible ways to interpret this question.

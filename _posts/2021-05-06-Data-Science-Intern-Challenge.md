@@ -193,7 +193,7 @@ data.order_amount.describe()
 **However! 
 Looking at the summary statistics of ```order_amount``` column raises red flags**
 *  The **Standard Deviation (SD) of AOV is 41,282.54 dollars**, which is very large relative to the mean
-* #### The **median order value is 284 dollars** while the max order value in our data set is $704,000 dollars!
+* The **median order value is 284 dollars** while the max order value in our data set is $704,000 dollars!
 
 This tells us us that the order amounts are spread out over an **extremely wide range** since the ***SD is 41,282.54*** and although, 50% of the orders are below 284 dollars (and 75% orders are below  390.00)
 

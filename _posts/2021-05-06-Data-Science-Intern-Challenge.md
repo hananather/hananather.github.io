@@ -4,26 +4,17 @@ published: true
 ## Fall 2021 Data Science Intern Challenge 
 # Question 1 
 ## Preliminary Work
+**Problem Statement:** Sneakers are a relatively cheap item, given that these shops are selling sneakers, something seems to be wrong in our analysis. Our objective is to figure out (1) what could be skewing the AOV and how we can better evaluate this data (2)a better metric to report for thsi dataset (3) the value of the matric 
 
-### What we know about this dataset: 
+**What we know about this dataset: 
 - There are 100 sneaker stores in this data
 - each of these shops only sells one kind of sneaker
 - average order value (AOV) is $3145.13
-
-**Problem Statement:** Sneakers are a relatively cheap item, given that these shops are selling sneakers, something seems to be wrong in our analysis. Our objective is to figure out (1) what could be skewing the AOV and how we can better evaluate this data (2)a better metric to report for thsi dataset (3) the value of the matric 
-
-
 ```python
 data = pd.read_csv('sneaker_data.csv')
-```
-
-
-```python
 data.head()
 ```
-take a screen shot 
- 
- 
+**take a screen shot **
 <div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
@@ -270,3 +261,15 @@ fig = px.scatter(df_shop_78, x="created_at",
                  title="Shop ID: 78 Distribution of Sales" )
 fig.show()
 ```
+
+
+{% raw %}
+<iframe width="900" height="500" frameborder="0" scrolling="no" src="//plotly.com/~hananather/46.embed"></iframe>
+{% endraw %}
+
+
+{% raw %}
+<iframe width="900" height="500" frameborder="0" scrolling="no" src="//plotly.com/~hananather/48.embed"></iframe>
+{% endraw %}
+
+

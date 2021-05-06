@@ -2,15 +2,15 @@
 published: true
 ---
 ## Fall 2021 Data Science Intern Challenge 
- 
-# Preliminary Work
+# Question 1 
+## Preliminary Work
 
-## What we know about this dataset: 
+### What we know about this dataset: 
 - There are 100 sneaker stores in this data
 - each of these shops only sells one kind of sneaker
 - average order value (AOV) is $3145.13
 
-**Problem Statement:** Sneakers are a relatively cheap item, given that these shops are selling sneakers, something seems to be wrong in our analysis. Our objective is to figure out what could be skewing the AOV and we can fix it.
+**Problem Statement:** Sneakers are a relatively cheap item, given that these shops are selling sneakers, something seems to be wrong in our analysis. Our objective is to figure out (1) what could be skewing the AOV and how we can better evaluate this data (2)a better metric to report for thsi dataset (3) the value of the matric 
 
 
 ```python
@@ -21,7 +21,7 @@ data = pd.read_csv('sneaker_data.csv')
 ```python
 data.head()
 ```
- 
+take a screen shot 
  
  
 <div>
@@ -127,7 +127,7 @@ print(data['created_at'].max())
     2017-03-30 9:55
 
 
-## Verify that our data contains no missing values:
+### Verify that our data contains no missing values:
 
 
 ```python
@@ -161,9 +161,9 @@ data.isnull().sum()
 
 - **There are no missing values in this dataset.**
 
-# 1a)
+## 1a)
 
-## Investigating the Flaw of Averages
+### Investigating the Flaw of Averages
 
 
 ```python
@@ -197,8 +197,8 @@ data.order_amount.describe()
 - There are 100 unique stores in this dataset
 - and the AOV is indeed 3145.13 dollars
 
-## However! 
-### Looking at the summary statistics of ```order_amount``` column raises red flags 
+**However! 
+Looking at the summary statistics of ```order_amount``` column raises red flags**
 *  The **Standard Deviation (SD) of AOV is 41,282.54 dollars**, which is very large relative to the mean
 * #### The **median order value is 284 dollars** while the max order value in our data set is $704,000 dollars!
 
@@ -206,7 +206,7 @@ This tells us us that the order amounts are spread out over an **extremely wide 
 
 Based on these facts, we have evidence which indicates our data may contain outliers..
 
-## Outlier Detection
+### Outlier Detection
 
 
 
@@ -229,7 +229,7 @@ fig = px.scatter(data, x="created_at",
 <iframe width="900" height="800" frameborder="0" scrolling="no" src="//plotly.com/~hananather/44.embed"></iframe>
 {% endraw %}
 
-## Immediately we can make note of several things about the data:
+**Immediately we can make note of several things about the data:**
 * There are two stores in particular which seem to be skewing the distribution of ```order_amount```: **shop_id =42** and **shop_id = 78**
 * **shop_id =42** has several orders where the order amount is exactly 740,000 dollars
     * however, the **total_items** is exactly 2000 in these orders

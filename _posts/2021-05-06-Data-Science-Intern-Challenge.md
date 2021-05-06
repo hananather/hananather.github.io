@@ -2,6 +2,8 @@
 published: true
 ---
 ## Fall 2021 Data Science Intern Challenge 
+* TOC
+{:toc}
 # Question 1 
 ## Preliminary Work
 **Problem Statement:** Sneakers are a relatively cheap item, given that these shops are selling sneakers, something seems to be wrong in our analysis. Our objective is to figure out (1) what could be skewing the AOV and how we can better evaluate this data (2)a better metric to report for thsi dataset (3) the value of the matric 

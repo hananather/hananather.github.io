@@ -16,7 +16,11 @@ Preliminary Work
 data = pd.read_csv('sneaker_data.csv')
 data.head()
 ```
-![1.png]({{site.baseurl}}/_posts/1.png)
+
+data-challenge
+![1.png]({{site.baseurl}}/images/data-challenge/1.png)
+
+
 
 ```python
 data.shape

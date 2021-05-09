@@ -451,7 +451,7 @@ Ultimately, the improved understanding of data allows Merchants and the Shopify 
 
 
 # Question 2
-**How many orders were shipped by Speedy Express in total?**
+### a. How many orders were shipped by Speedy Express in total?
 
 
 ```sql
@@ -461,10 +461,10 @@ INNER JOIN Shippers ON Orders.ShipperID = Shippers.ShipperID
 GROUP BY Orders.ShipperID;
 ```
 
-There were 54 orders shipped by Speedy Express.
+**There were 54 orders shipped by Speedy Express.**
 
 
-**What is the last name of the employee with the most orders?**
+### b. What is the last name of the employee with the most orders?
 
 ```sql
 SELECT LastName, COUNT(Orders.EmployeeID)
@@ -478,7 +478,7 @@ The last of of the employee with the most orders is "Peacock".
 
 
 
-**What product was ordered most by customers in Germany?**
+### c. What product was ordered most by customers in Germany?
 
 
 There can be two possible ways to interpret this question.
@@ -497,7 +497,7 @@ FROM(
 	 Group By Products.ProductID
 	 Order by  OrderDetails.Quantity Desc);
 ```
-Steeleye Stout was purchased 100 times, was the most ordered item in Germany
+**Steeleye Stout was purchased 100 times, was the most ordered item in Germany**.
 
 
 However, if we are **not** interested in the quantity of the product, but simply care about which product was ordered most frequently by customers, we can using the following SQL Query:
@@ -516,5 +516,4 @@ FROM (
       );
 ```
 
-Gorgonzola Telino was ordered five times, making it the most ordered product in Germany.
-
+**Gorgonzola Telino was ordered five times, making it the most ordered product in Germany.**

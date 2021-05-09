@@ -51,7 +51,7 @@ msno.matrix(data)
 ```
 
 
-![png](output_11_1.png)
+![2.png]({{site.baseurl}}/images/data-challenge/2.png)
 
 
 

@@ -51,7 +51,7 @@ msno.matrix(data)
 ```
 
 
-![2.png]({{site.baseurl}}/images/data-challenge/2.png)
+![2.png]({{site.baseurl}}/images/data-challenge/output_11_1.png)
 
 
 
@@ -225,7 +225,7 @@ total_items_count = data.total_items.value_counts().rename_axis('total_items').r
 ```python
 groupbyTotal
 ```
-![2.png]({{site.baseurl}}/_posts/2.png)
+![2.png]({{site.baseurl}}/images/data-challenge/2.png)
 
 
 ```python
@@ -244,7 +244,7 @@ total_items_count  = {'total_items':
         }
 total_items_count  = pd.DataFrame(total_items_count , columns = ['total_items', 'count'])
 ```
-![3.png]({{site.baseurl}}/_posts/3.png)
+![3.png]({{site.baseurl}}/images/data-challenge/3.png)
 
 
 ```python
@@ -362,7 +362,7 @@ def metrics_calculator(df):
 metrics_calculator(data)
 ```
 
-![4.png]({{site.baseurl}}/_posts/4.png)
+![4.png]({{site.baseurl}}/images/data-challenge/4.png)
 
 
 - There is only one order in the dataset where 8 items were ordered, which explains the NaN Standard deviation. 

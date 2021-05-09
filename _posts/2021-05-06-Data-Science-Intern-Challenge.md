@@ -1,11 +1,11 @@
 ---
 published: true
 ---
-## Fall 2021 Data Science Intern Challenge 
 * TOC
 {:toc}
 # Question 1 
-## Preliminary Work
+
+Preliminary Work
 **Problem Statement:** Sneakers are a relatively cheap item, given that these shops are selling sneakers, something seems to be wrong in our analysis. Our objective is to figure out (1) what could be skewing the AOV and how we can better evaluate this data (2)a better metric to report for thsi dataset (3) the value of the matric 
 
 **What we know about this dataset: 
@@ -16,88 +16,7 @@ published: true
 data = pd.read_csv('sneaker_data.csv')
 data.head()
 ```
-**take a screen shot **
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-<table border="1" class="dataframe">
-  <thead>
-    <tr style="text-align: right;">
-      <th></th>
-      <th>order_id</th>
-      <th>shop_id</th>
-      <th>user_id</th>
-      <th>order_amount</th>
-      <th>total_items</th>
-      <th>payment_method</th>
-      <th>created_at</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>0</td>
-      <td>1</td>
-      <td>53</td>
-      <td>746</td>
-      <td>224</td>
-      <td>2</td>
-      <td>cash</td>
-      <td>2017-03-13 12:36</td>
-    </tr>
-    <tr>
-      <td>1</td>
-      <td>2</td>
-      <td>92</td>
-      <td>925</td>
-      <td>90</td>
-      <td>1</td>
-      <td>cash</td>
-      <td>2017-03-03 17:38</td>
-    </tr>
-    <tr>
-      <td>2</td>
-      <td>3</td>
-      <td>44</td>
-      <td>861</td>
-      <td>144</td>
-      <td>1</td>
-      <td>cash</td>
-      <td>2017-03-14 4:23</td>
-    </tr>
-    <tr>
-      <td>3</td>
-      <td>4</td>
-      <td>18</td>
-      <td>935</td>
-      <td>156</td>
-      <td>1</td>
-      <td>credit_card</td>
-      <td>2017-03-26 12:43</td>
-    </tr>
-    <tr>
-      <td>4</td>
-      <td>5</td>
-      <td>18</td>
-      <td>883</td>
-      <td>156</td>
-      <td>1</td>
-      <td>credit_card</td>
-      <td>2017-03-01 4:35</td>
-    </tr>
-  </tbody>
-</table>
-</div>
+![1.png]({{site.baseurl}}/_posts/1.png)
 
 ```python
 data.shape

@@ -77,7 +77,7 @@ data.isnull().sum()
 
 - **There are no missing values in this dataset.**
 
-### a. what could be going wrong with our calculation and a better way to evaluate this data
+## a. what could be going wrong with our calculation and a better way to evaluate this data
 
 **Investigating the Flaw of Averages**
 
